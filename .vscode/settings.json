@@ -1,0 +1,13 @@
+{
+  "C_Cpp.intelliSenseEngine": "default",
+  "files.associations": {
+    "i2s_pdm.h": "c",
+    "task.h": "c",
+    "inttypes.h": "c",
+    "freertos.h": "c",
+    "audio_common.h": "c",
+    "wifi_connect.h": "c",
+    "esp_log.h": "c",
+    "esp_websocket_client.h": "c"
+  }
+}

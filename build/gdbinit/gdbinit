@@ -1,0 +1,2 @@
+source /home/ubuntu/esp/proj/ai_audio/build/gdbinit/symbols
+source /home/ubuntu/esp/proj/ai_audio/build/gdbinit/connect

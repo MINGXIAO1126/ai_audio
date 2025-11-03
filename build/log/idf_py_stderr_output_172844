@@ -1,0 +1,46 @@
+[0;33m--- esp-idf-monitor 1.8.0 on /dev/ttyACM0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0m--- 0x40048839: [0;33muart_tx_one_char_uart[0m[0m in [0;32mROM[0m
+[0m--- 0x4037e26d: [0;33muxListRemove[0m[0m at [0;32m/home/ubuntu/esp/esp-idf/components/freertos/FreeRTOS-Kernel/list.c[0m[0m:[1;31m216[0m
+[0m--- 0x4037e26a: [0;33muxListRemove[0m[0m at [0;32m/home/ubuntu/esp/esp-idf/components/freertos/FreeRTOS-Kernel/list.c[0m[0m:[1;31m216[0m
+[0m--- 0x4037e64d: [0;33mprvCheckTasksWaitingTermination[0m[0m at [0;32m/home/ubuntu/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c[0m[0m:[1;31m4594[0m
+[0m--- 0x4037e7bf: [0;33mprvIdleTask[0m[0m at [0;32m/home/ubuntu/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c[0m[0m:[1;31m4304[0m
+[0m--- 0x4037d59d: [0;33mvPortTaskWrapper[0m[0m at [0;32m/home/ubuntu/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x40375c48: [0;33mesp_restart_noos[0m[0m at [0;32m/home/ubuntu/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c[0m[0m:[1;31m160[0m
+[0m--- 0x4037e26d: [0;33muxListRemove[0m[0m at [0;32m/home/ubuntu/esp/esp-idf/components/freertos/FreeRTOS-Kernel/list.c[0m[0m:[1;31m216[0m
+[0m--- 0x4037e26a: [0;33muxListRemove[0m[0m at [0;32m/home/ubuntu/esp/esp-idf/components/freertos/FreeRTOS-Kernel/list.c[0m[0m:[1;31m216[0m
+[0m--- 0x4037e64d: [0;33mprvCheckTasksWaitingTermination[0m[0m at [0;32m/home/ubuntu/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c[0m[0m:[1;31m4594[0m
+[0m--- 0x4037e7bf: [0;33mprvIdleTask[0m[0m at [0;32m/home/ubuntu/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c[0m[0m:[1;31m4304[0m
+[0m--- 0x4037d59d: [0;33mvPortTaskWrapper[0m[0m at [0;32m/home/ubuntu/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x40375c48: [0;33mesp_restart_noos[0m[0m at [0;32m/home/ubuntu/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c[0m[0m:[1;31m160[0m
+[0m--- 0x4037e24a: [0;33muxListRemove[0m[0m at [0;32m/home/ubuntu/esp/esp-idf/components/freertos/FreeRTOS-Kernel/list.c[0m[0m:[1;31m207[0m
+[0m--- 0x4037e247: [0;33muxListRemove[0m[0m at [0;32m/home/ubuntu/esp/esp-idf/components/freertos/FreeRTOS-Kernel/list.c[0m[0m:[1;31m207[0m
+[0m--- 0x4037e64d: [0;33mprvCheckTasksWaitingTermination[0m[0m at [0;32m/home/ubuntu/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c[0m[0m:[1;31m4594[0m
+[0m--- 0x4037e7bf: [0;33mprvIdleTask[0m[0m at [0;32m/home/ubuntu/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c[0m[0m:[1;31m4304[0m
+[0m--- 0x4037d59d: [0;33mvPortTaskWrapper[0m[0m at [0;32m/home/ubuntu/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x40375c48: [0;33mesp_restart_noos[0m[0m at [0;32m/home/ubuntu/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c[0m[0m:[1;31m160[0m
+[0m--- 0x4037e24a: [0;33muxListRemove[0m[0m at [0;32m/home/ubuntu/esp/esp-idf/components/freertos/FreeRTOS-Kernel/list.c[0m[0m:[1;31m207[0m
+[0m--- 0x4037e247: [0;33muxListRemove[0m[0m at [0;32m/home/ubuntu/esp/esp-idf/components/freertos/FreeRTOS-Kernel/list.c[0m[0m:[1;31m207[0m
+[0m--- 0x4037e64d: [0;33mprvCheckTasksWaitingTermination[0m[0m at [0;32m/home/ubuntu/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c[0m[0m:[1;31m4594[0m
+[0m--- 0x4037e7bf: [0;33mprvIdleTask[0m[0m at [0;32m/home/ubuntu/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c[0m[0m:[1;31m4304[0m
+[0m--- 0x4037d59d: [0;33mvPortTaskWrapper[0m[0m at [0;32m/home/ubuntu/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x40375c48: [0;33mesp_restart_noos[0m[0m at [0;32m/home/ubuntu/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c[0m[0m:[1;31m160[0m
+[0m--- 0x4037e26d: [0;33muxListRemove[0m[0m at [0;32m/home/ubuntu/esp/esp-idf/components/freertos/FreeRTOS-Kernel/list.c[0m[0m:[1;31m216[0m
+[0m--- 0x4037e26a: [0;33muxListRemove[0m[0m at [0;32m/home/ubuntu/esp/esp-idf/components/freertos/FreeRTOS-Kernel/list.c[0m[0m:[1;31m216[0m
+[0m--- 0x4037e64d: [0;33mprvCheckTasksWaitingTermination[0m[0m at [0;32m/home/ubuntu/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c[0m[0m:[1;31m4594[0m
+[0m--- 0x4037e7bf: [0;33mprvIdleTask[0m[0m at [0;32m/home/ubuntu/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c[0m[0m:[1;31m4304[0m
+[0m--- 0x4037d59d: [0;33mvPortTaskWrapper[0m[0m at [0;32m/home/ubuntu/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x40375c48: [0;33mesp_restart_noos[0m[0m at [0;32m/home/ubuntu/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c[0m[0m:[1;31m160[0m
+[0m--- 0x4037e24a: [0;33muxListRemove[0m[0m at [0;32m/home/ubuntu/esp/esp-idf/components/freertos/FreeRTOS-Kernel/list.c[0m[0m:[1;31m207[0m
+[0m--- 0x4037e247: [0;33muxListRemove[0m[0m at [0;32m/home/ubuntu/esp/esp-idf/components/freertos/FreeRTOS-Kernel/list.c[0m[0m:[1;31m207[0m
+[0m--- 0x4037e64d: [0;33mprvCheckTasksWaitingTermination[0m[0m at [0;32m/home/ubuntu/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c[0m[0m:[1;31m4594[0m
+[0m--- 0x4037e7bf: [0;33mprvIdleTask[0m[0m at [0;32m/home/ubuntu/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c[0m[0m:[1;31m4304[0m
+[0m--- 0x4037d59d: [0;33mvPortTaskWrapper[0m[0m at [0;32m/home/ubuntu/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x40375c48: [0;33mesp_restart_noos[0m[0m at [0;32m/home/ubuntu/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c[0m[0m:[1;31m160[0m
+[0m--- 0x4037e24a: [0;33muxListRemove[0m[0m at [0;32m/home/ubuntu/esp/esp-idf/components/freertos/FreeRTOS-Kernel/list.c[0m[0m:[1;31m207[0m
+[0m--- 0x4037e247: [0;33muxListRemove[0m[0m at [0;32m/home/ubuntu/esp/esp-idf/components/freertos/FreeRTOS-Kernel/list.c[0m[0m:[1;31m207[0m
+[0m--- 0x4037e64d: [0;33mprvCheckTasksWaitingTermination[0m[0m at [0;32m/home/ubuntu/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c[0m[0m:[1;31m4594[0m
+[0m--- 0x4037e7bf: [0;33mprvIdleTask[0m[0m at [0;32m/home/ubuntu/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c[0m[0m:[1;31m4304[0m
+[0m--- 0x4037d59d: [0;33mvPortTaskWrapper[0m[0m at [0;32m/home/ubuntu/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x40375c48: [0;33mesp_restart_noos[0m[0m at [0;32m/home/ubuntu/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c[0m[0m:[1;31m160[0m
+[0m

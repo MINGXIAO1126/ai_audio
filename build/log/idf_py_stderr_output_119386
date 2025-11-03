@@ -1,0 +1,5 @@
+[0;33m--- esp-idf-monitor 1.8.0 on /dev/ttyACM0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0m--- 0x4200a318: [0;33musb_serial_jtag_ll_txfifo_writable[0m[0m at [0;32m/home/ubuntu/esp/esp-idf/components/hal/esp32s3/include/hal/usb_serial_jtag_ll.h[0m[0m:[1;31m163[0m
+[0m--- (inlined by) [0;33musb_serial_jtag_tx_char_no_driver[0m[0m at [0;32m/home/ubuntu/esp/esp-idf/components/esp_driver_usb_serial_jtag/src/usb_serial_jtag_vfs.c[0m[0m:[1;31m159[0m
+[0m
