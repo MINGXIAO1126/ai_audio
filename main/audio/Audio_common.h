@@ -10,7 +10,7 @@
 #define SAMPLE_RATE 44100
 
 //buf size计算方法：根据esp32官方文档，buf size = dma frame num * 声道数 * 数据位宽 / 8
-#define BUF_SIZE    (1023 * 1 * 32 / 8)
+#define BUF_SIZE (1023 * 1 * 32 / 8) //4092
  
 //音频buffer
 extern uint8_t buf[BUF_SIZE];

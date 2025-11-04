@@ -36,7 +36,7 @@ void websocket_client_app_start(void)
         .task_prio = 5,//任务优先级
         .task_stack = 4096,//任务的堆栈大小
         .buffer_size = 1024,//发送、接收缓冲区大小
-        .disable_auto_reconnect = true,//自动重连
+        .disable_auto_reconnect = false,//自动重连
         .ping_interval_sec = 10//心跳间隔，客户端每隔10秒自动发送一个ping帧，服务器回复，用于检测连接是否还活着
     };
 

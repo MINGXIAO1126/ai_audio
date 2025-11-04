@@ -9,5 +9,4 @@ extern esp_websocket_client_handle_t ws_client;//websocket连接句柄
 
 void websocket_client_app_start(void);
 
-
 #endif

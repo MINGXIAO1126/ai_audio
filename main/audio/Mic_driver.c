@@ -9,7 +9,6 @@
 
 uint8_t buf[BUF_SIZE] = {0};
 i2s_chan_handle_t rx_handle =NULL;
-QueueHandle_t ws_send_queue = NULL;//websocket发送队列
 
 audio_processor_t audio_proc = {
     .gain = 15.0f,//增益倍数
@@ -110,36 +109,8 @@ void process_audio_buffer(void* buffer, size_t bytes, audio_processor_t* proc)
 esp_err_t mic_read(void)
 {
     size_t bytes = 0;
+
     esp_err_t ret = i2s_channel_read(rx_handle,buf,BUF_SIZE,&bytes,1000);
-
-    if (ret == ESP_OK && bytes > 0)
-    {
-        process_audio_buffer(buf,bytes,&audio_proc);
-    }
-
-    //将数据放入队列，然后新建一个任务用于websocket数据发送
-    if(ws_send_queue != NULL)
-    {
-        // 入队
-        if (ws_send_queue != NULL) 
-        {
-            wsSendData_t send_data;
-            
-            // 复制音频数据到结构体的数组中
-            memcpy(send_data.audio_buf, buf, bytes);
-
-            // 赋值有效数据长度（
-            send_data.data_len = bytes;
-
-            // 非阻塞入队（队列满则丢弃，不阻塞音频任务）
-            if (xQueueSend(ws_send_queue, &send_data, 0) != pdPASS) 
-            {
-                ESP_LOGW("QUEUE", "WS send queue full, drop data");
-            }
-        }
-    } else {
-        ESP_LOGW("MIC", "Read failed: ret=%s, bytes=%d", esp_err_to_name(ret), bytes);
-    }
 
     return ret;
 }

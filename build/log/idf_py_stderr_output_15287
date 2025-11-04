@@ -1,0 +1,14 @@
+[0;33m--- esp-idf-monitor 1.8.0 on /dev/ttyACM0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0m--- 0x40048839: [0;33muart_tx_one_char_uart[0m[0m in [0;32mROM[0m
+[0m--- 0x40375c48: [0;33mesp_restart_noos[0m[0m at [0;32m/home/ubuntu/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c[0m[0m:[1;31m160[0m
+[0m--- 0x40375c48: [0;33mesp_restart_noos[0m[0m at [0;32m/home/ubuntu/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c[0m[0m:[1;31m160[0m
+[0m--- 0x40375c48: [0;33mesp_restart_noos[0m[0m at [0;32m/home/ubuntu/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c[0m[0m:[1;31m160[0m
+[0m--- 0x40375c48: [0;33mesp_restart_noos[0m[0m at [0;32m/home/ubuntu/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c[0m[0m:[1;31m160[0m
+[0m--- 0x403772c4: [0;33m_xt_kernel_exc[0m[0m at [0;32m/home/ubuntu/esp/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m599[0m
+[0m--- 0x40374306: [0;33m_KernelExceptionVector[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x4037da4b: [0;33m_frxt_dispatch[0m[0m at [0;32m/home/ubuntu/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S[0m[0m:[1;31m452[0m
+[0m--- 0x403772c1: [0;33m_xt_debugexception[0m[0m at [0;32m/home/ubuntu/esp/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m483[0m
+[0m--- 0x40374303: [0;33m_KernelExceptionVector[0m[0m at [0;32m/home/ubuntu/esp/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m589[0m
+[0m--- 0x40375c48: [0;33mesp_restart_noos[0m[0m at [0;32m/home/ubuntu/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c[0m[0m:[1;31m160[0m
+[0m

@@ -10,8 +10,6 @@
 #define INMP_SCK    GPIO_NUM_4
 #define INMP_WS     GPIO_NUM_6
 
-#define WS_SEND_QUEUE_LEN 4//队列长度，避免溢出
-
 typedef struct {
     float gain;           // 增益倍数
     float compression_threshold; // 压缩阈值
@@ -19,13 +17,6 @@ typedef struct {
     bool enable_agc;      // 是否启用自动增益
 } audio_processor_t;
 
-typedef struct 
-{
-    uint8_t audio_buf[BUF_SIZE];//存储音频数据
-    size_t data_len;//有效音频数据长度
-}wsSendData_t;
-
-extern QueueHandle_t ws_send_queue;//websocket发送队列
 
 extern i2s_chan_handle_t rx_handle;
 

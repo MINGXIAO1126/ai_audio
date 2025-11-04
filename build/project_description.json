@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "i2s_std_example",
-    "project_version":    "35ea09b-dirty",
+    "project_version":    "0a8a651-dirty",
     "project_path":       "/home/ubuntu/esp/proj/ai_audio",
     "idf_path":           "/home/ubuntu/esp/esp-idf",
     "build_dir":          "/home/ubuntu/esp/proj/ai_audio/build",
