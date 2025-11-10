@@ -1,0 +1,336 @@
+[0;32mI (246) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (247) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (247) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (247) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (247) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (248) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (248) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (248) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (249) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (249) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (250) MSPI Timing: PSRAM timing tuning index: 5[0m
+(SPI_FAST_FLASH_BOOT)
+Saved PC:0x40056f60
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x170c
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xe24
+load:0x403cb700,len:0x3198
+entry 0x403c893c
+[0;32mI (32) boot: ESP-IDF v5.4.1-dirty 2nd stage bootloader[0m
+[0;32mI (32) boot: compile time Nov 10 2025 15:40:50[0m
+[0;32mI (32) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v0.2[0m
+[0;32mI (32) boot: efuse block revision: v1.3[0m
+[0;32mI (32) qio_mode: Enabling QIO for flash chip WinBond[0m
+[0;32mI (33) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (33) boot.esp32s3: SPI Mode       : QIO[0m
+[0;32mI (33) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (33) boot: Enabling RNG early entropy source...[0m
+[0;32mI (33) boot: Partition Table:[0m
+[0;32mI (33) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (34) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (34) boot:  1 factory          factory app      00 00 00010000 00300000[0m
+[0;32mI (35) boot:  2 flash_test       Unknown data     01 81 00310000 00084000[0m
+[0;32mI (35) boot:  3 model            Unknown data     01 82 00394000 005c3000[0m
+[0;32mI (35) boot: End of partition table[0m
+[0;32mI (36) esp_image: segment 0: paddr=00010020 vaddr=3c100020 size=2bffch (180220) map[0m
+[0;32mI (63) esp_image: segment 1: paddr=0003c024 vaddr=3fc9c900 size=03ff4h ( 16372) load[0m
+[0;32mI (66) esp_image: segment 2: paddr=00040020 vaddr=42000020 size=f9514h (1021204) map[0m
+[0;32mI (218) esp_image: segment 3: paddr=0013953c vaddr=3fca08f4 size=035ech ( 13804) load[0m
+[0;32mI (221) esp_image: segment 4: paddr=0013cb30 vaddr=40374000 size=1884ch (100428) load[0m
+[0;32mI (240) esp_image: segment 5: paddr=00155384 vaddr=600fe100 size=0001ch (    28) load[0m
+[0;32mI (250) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (250) boot: Disabling RNG early entropy source...[0m
+[0;32mI (251) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (252) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (252) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (252) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (252) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (253) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (253) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (253) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (253) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (254) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (254) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (255) MSPI Timing: PSRAM timing tuning index: 4[0m
+[0;32mI (255) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (255) esp_psram: Speed: 80MHz[0m
+[0;32mI (267) mmu_psram: Read only data copied and mapped to SPIRAM[0m
+[0;32mI (337) mmu_psram: Instructions copied and mapped to SPIRAM[0m
+[0;32mI (337) cpu_start: Multicore app[0m
+[0;32mI (591) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (599) cpu_start: Pro cpu start user code[0m
+[0;32mI (600) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (600) app_init: Application information:[0m
+[0;32mI (600) app_init: Project name:     factory_01[0m
+[0;32mI (600) app_init: App version:      f58f99a-dirty[0m
+[0;32mI (600) app_init: Compile time:     Nov 10 2025 15:40:45[0m
+[0;32mI (600) app_init: ELF file SHA256:  78961290f...[0m
+[0;32mI (601) app_init: ESP-IDF:          v5.4.1-dirty[0m
+[0;32mI (601) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (601) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (601) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (601) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (601) heap_init: At 3FCA82C8 len 00041448 (261 KiB): RAM[0m
+[0;32mI (602) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (602) heap_init: At 600FE11C len 00001ECC (7 KiB): RTCRAM[0m
+[0;32mI (602) esp_psram: Adding pool of 6976K of PSRAM memory to heap allocator[0m
+[0;32mI (603) spi_flash: detected chip: winbond[0m
+[0;32mI (603) spi_flash: flash io: qio[0m
+[0;32mI (608) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (608) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (609) main_task: Started on CPU0[0m
+[0;32mI (619) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (619) main_task: Calling app_main()[0m
+[0;32mI (619) MIC_LOOPBACK: 
+[0m
+[0;32mI (619) MIC_LOOPBACK: ========================================[0m
+[0;32mI (619) MIC_LOOPBACK:   麦克风实时回声测试程序 (AFE版本)[0m
+[0;32mI (619) MIC_LOOPBACK:   Microphone Loopback with AFE[0m
+[0;32mI (619) MIC_LOOPBACK: ========================================
+[0m
+[0;32mI (619) MIC_LOOPBACK: 1. Initializing board hardware...[0m
+[0;33mW (619) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+[0;32mI (619) board: I2C bus initialized successfully[0m
+[0;32mI (629) ES7210: Work in Slave mode[0m
+[0;32mI (629) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (639) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (639) ES7210: Enable ES7210_INPUT_MIC3[0m
+[0;32mI (639) ES7210: Enable ES7210_INPUT_MIC4[0m
+[0;32mI (639) ES7210: Enable TDM mode[0m
+[0;32mI (649) I2S_IF: channel mode 0 bits:32/32 channel:2 mask:3[0m
+[0;32mI (649) I2S_IF: STD Mode 0 bits:32/32 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (649) ES7210: Bits 16[0m
+[0;32mI (659) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (659) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (659) ES7210: Enable ES7210_INPUT_MIC3[0m
+[0;32mI (659) ES7210: Enable ES7210_INPUT_MIC4[0m
+[0;32mI (669) ES7210: Enable TDM mode[0m
+[0;32mI (669) ES7210: Unmuted[0m
+[0;32mI (669) Adev_Codec: Open codec device OK[0m
+[0;32mI (679) ES8311: Work in Slave mode[0m
+[0;31mE (689) I2S_IF: Mode 1 conflict sample_rate 16000 with 0[0m
+[0;32mI (699) Adev_Codec: Open codec device OK[0m
+[0;32mI (699) MIC_LOOPBACK:    Board initialized (16kHz, 2ch, 16bit)
+[0m
+[0;32mI (699) MIC_LOOPBACK: 2. Initializing TCA9555 I/O expander...[0m
+[0;32mI (699) MIC_LOOPBACK:   I/O expander initialized
+[0m
+[0;32mI (699) MIC_LOOPBACK: 3. Enabling power amplifier...[0m
+[0;32mI (799) MIC_LOOPBACK:   Power amplifier enabled
+[0m
+[0;32mI (799) MIC_LOOPBACK: 4. Setting speaker volume to 70%...[0m
+[0;32mI (799) MIC_LOOPBACK:   Speaker volume set
+[0m
+[0;32mI (799) MIC_LOOPBACK: 5. Initializing WiFi and WebSocket...[0m
+[0;32mI (799) WebSocket: 
+========================================[0m
+[0;32mI (799) WebSocket:   WebSocket Audio Streaming Init[0m
+[0;32mI (799) WebSocket: ========================================[0m
+[0;32mI (799) WebSocket: Audio RX queue created (size: 10)[0m
+[0;32mI (799) WebSocket: Audio RX play task created[0m
+[0;32mI (799) WebSocket: Audio RX play task started[0m
+[0;32mI (799) WebSocket: 1. Initializing WiFi...[0m
+[0;32mI (799) pp: pp rom version: e7ae62f[0m
+[0;32mI (799) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (809) wifi:wifi driver task: 3fcc258c, prio:23, stack:6656, core=0[0m
+[0;32mI (809) wifi:wifi firmware version: 79fa3f41ba[0m
+[0;32mI (809) wifi:wifi certification version: v7.0[0m
+[0;32mI (809) wifi:config NVS flash: enabled[0m
+[0;32mI (809) wifi:config nano formatting: disabled[0m
+[0;32mI (809) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (809) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (809) wifi:Init management short buffer num: 32[0m
+[0;32mI (809) wifi:Init static tx buffer num: 16[0m
+[0;32mI (809) wifi:Init tx cache buffer num: 32[0m
+[0;32mI (809) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (809) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (809) wifi:Init static rx buffer num: 10[0m
+[0;32mI (809) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (809) wifi_init: rx ba win: 6[0m
+[0;32mI (809) wifi_init: accept mbox: 6[0m
+[0;32mI (809) wifi_init: tcpip mbox: 32[0m
+[0;32mI (809) wifi_init: udp mbox: 6[0m
+[0;32mI (809) wifi_init: tcp mbox: 6[0m
+[0;32mI (819) wifi_init: tcp tx win: 5760[0m
+[0;32mI (819) wifi_init: tcp rx win: 5760[0m
+[0;32mI (819) wifi_init: tcp mss: 1440[0m
+[0;32mI (819) wifi_init: WiFi/LWIP prefer SPIRAM[0m
+[0;32mI (819) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (819) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (819) phy_init: phy_version 700,8582a7fd,Feb 10 2025,20:13:11[0m
+[0;32mI (869) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (889) wifi:mode : sta (80:b5:4e:da:76:e0)[0m
+[0;32mI (889) wifi:enable tsf[0m
+[0;32mI (889) WebSocket: WiFi initialization finished.[0m
+[0;32mI (889) WebSocket: WiFi STA started, connecting...[0m
+[0;32mI (889) WebSocket: Connecting to SSID: Chenhh[0m
+[0;32mI (889) wifi:new:<1,1>, old:<1,0>, ap:<255,255>, sta:<1,1>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (889) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (909) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (929) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (949) wifi:state: run -> init (0x2a0)[0m
+[0;32mI (959) wifi:new:<1,0>, old:<1,1>, ap:<255,255>, sta:<1,1>, prof:1, snd_ch_cfg:0x0[0m
+[0;33mW (959) WebSocket: Retry to connect to WiFi... (1/5)[0m
+[0;33mW (3359) WebSocket: Retry to connect to WiFi... (2/5)[0m
+[0;32mI (3439) wifi:new:<1,1>, old:<1,0>, ap:<255,255>, sta:<1,1>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (3449) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (3459) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (3469) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (3489) wifi:connected with Chenhh, aid = 7, channel 1, 40U, bssid = 04:f1:69:d6:88:7c[0m
+[0;32mI (3489) wifi:security: WPA2-PSK, phy: bgn, rssi: -50[0m
+[0;32mI (3489) wifi:pm start, type: 1[0m
+
+[0;32mI (3489) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (3489) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (3539) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (4649) esp_netif_handlers: sta ip: 192.168.2.7, mask: 255.255.255.0, gw: 192.168.2.1[0m
+[0;32mI (4649) WebSocket: Got IP Address: 192.168.2.7[0m
+[0;32mI (4649) WebSocket: ✓ Connected to WiFi SSID: Chenhh[0m
+[0;32mI (4649) WebSocket: 
+2. Initializing WebSocket...[0m
+[0;32mI (4649) WebSocket: Initializing WebSocket client...[0m
+[0;32mI (4649) WebSocket: WebSocket URI: ws://192.168.2.247:6006/ws[0m
+[0;32mI (4649) websocket_client: Started[0m
+[0;32mI (4649) WebSocket: WebSocket client started successfully[0m
+[0;32mI (4859) wifi:<ba-add>idx:0 (ifx:0, 04:f1:69:d6:88:7c), tid:0, ssn:7, winSize:64[0m
+[0;32mI (4879) WebSocket: WebSocket connected to server[0m
+[0;32mI (4949) WebSocket: ✓ WebSocket connected successfully[0m
+[0;32mI (4949) WebSocket: 
+========================================[0m
+[0;32mI (4949) WebSocket:   WebSocket initialization complete![0m
+[0;32mI (4949) WebSocket:   Bidirectional audio streaming enabled[0m
+[0;32mI (4949) WebSocket: ========================================
+[0m
+[0;32mI (4949) MIC_LOOPBACK:    ✓ WebSocket initialized
+[0m
+[0;32mI (4949) MIC_LOOPBACK: 5. Starting AFE audio loopback...[0m
+[0;32mI (4949) App/Speech: 
+========== Audio Loopback with AFE Init ==========[0m
+[0;33mW (4949) AFE_CONFIG: wakenet model not found. please load wakenet model...[0m
+[0;32mI (4949) App/Speech: AFE Linear Gain: 10.0 (提高麦克风灵敏度)[0m
+[0;32mI (4949) App/Speech: AGC: Compression=15 dB, Target=-6 dBFS[0m
+[0;32mI (4949) App/Speech: AEC Filter Length: 4[0m
+[0;32mI (4949) App/Speech: AFE Config:[0m
+[0;32mI (4949) App/Speech:    AEC (Acoustic Echo Cancellation)[0m
+[0;32mI (4949) App/Speech:    SE (Speech Enhancement)[0m
+[0;32mI (4949) App/Speech:    NS (Noise Suppression)[0m
+[0;32mI (4949) App/Speech:    VAD (Voice Activity Detection) - Mode: 3[0m
+[0;32mI (4949) App/Speech:    AGC (Automatic Gain Control)[0m
+[0;32mI (4949) App/Speech:    WakeNet (Disabled)[0m
+[0;32mI (4949) App/Speech:    MultiNet (Disabled)[0m
+[0;32mI (4949) App/Speech: [0m
+[0;32mI (4949) App/Speech: Audio Processing:[0m
+[0;32mI (4949) App/Speech:    Output Amplification: 3x (本地播放)[0m
+[0;32mI (4949) App/Speech:    VAD Filter: 启用 (只发送人声到服务器)[0m
+[0;32mI (4949) App/Speech:    Soft Limiter: 启用 (防止刺耳失真)[0m
+[0;32mI (4949) App/Speech:    Limiter Threshold: 28000[0m
+[0;32mI (4949) App/Speech:    WebSocket Stream: 启用 (需配置WiFi)[0m
+[0;32mI (4949) App/Speech:    Local Playback: 始终播放所有音频（不受VAD过滤影响）[0m
+[0;32mI (4949) App/Speech:    Server Send: 只发送人声[0m
+[0;32mI (5069) AFE: AFE Version: (2MIC_V250113)[0m
+[0;32mI (5069) AFE: Input PCM Config: total 4 channels(2 microphone, 1 playback), sample rate:16000[0m
+[0;32mI (5069) AFE: AFE Pipeline: [input] -> |AEC(SR_LOW_COST)| -> |SE(BSS)| -> |VAD(WebRTC)| -> [output][0m
+[0;32mI (5079) App/Speech: Starting AFE loopback tasks...[0m
+[0;32mI (5079) App/Speech: === Loopback Detect Task Started ===[0m
+[0;32mI (5079) App/Speech: AFE chunk size: 512 samples[0m
+[0;32mI (5079) App/Speech: VAD Filter: ENABLED (只发送人声到服务器)[0m
+[0;32mI (5079) App/Speech: Soft Limiter: ENABLED (防止刺耳)[0m
+[0;32mI (5179) App/Speech: === Loopback Feed Task Started ===[0m
+[0;32mI (5179) App/Speech: Chunk size: 1024 samples, Channels: 4[0m
+[0;32mI (5189) App/Speech: ========== AFE Loopback Init Complete ==========
+[0m
+[0;32mI (5189) MIC_LOOPBACK:    ✓ AFE loopback started
+[0m
+[0;32mI (5189) MIC_LOOPBACK: ========================================[0m
+[0;32mI (5189) MIC_LOOPBACK:   系统初始化完成！[0m
+[0;32mI (5189) MIC_LOOPBACK:   对着麦克风说话，应该能听到高质量回声[0m
+[0;32mI (5189) MIC_LOOPBACK:   (经过AEC/SE/NS/VAD/AGC算法处理)[0m
+[0;32mI (5189) MIC_LOOPBACK: ========================================
+[0m
+[0;32mI (5819) WebSocket: Received text: {"type": "partial_result", "text": "", "segment": 0}[0m
+[0;32mI (6159) WebSocket: Received text: {"type": "partial_result", "text": "", "segment": 0}[0m
+[0;32mI (6449) WebSocket: Received text: {"type": "partial_result", "text": "", "segment": 0}[0m
+[0;32mI (6889) WebSocket: Received text: {"type": "partial_result", "text": "", "segment": 0}[0m
+[0;32mI (7289) WebSocket: Received text: {"type": "partial_result", "text": "", "segment": 1}[0m
+[0;32mI (7589) WebSocket: Received text: {"type": "partial_result", "text": "", "segment": 1}[0m
+[0;32mI (7909) WebSocket: Received text: {"type": "partial_result", "text": "", "segment": 1}[0m
+[0;32mI (8249) WebSocket: Received text: {"type": "partial_result", "text": "", "segment": 1}[0m
+[0;32mI (8409) App/Speech: [PLAY] Count:100, VAD:语音96/静音4, Vol:0.0 dB, Max:6620, OK:99, Fail:0[0m
+[0;32mI (8629) WebSocket: Received text: {"type": "partial_result", "text": "", "segment": 2}[0m
+[0;32mI (8949) WebSocket: Received text: {"type": "partial_result", "text": "", "segment": 2}[0m
+[0;32mI (9239) WebSocket: Received text: {"type": "partial_result", "text": "", "segment": 2}[0m
+[0;32mI (9679) WebSocket: Received text: {"type": "partial_result", "text": "", "segment": 2}[0m
+[0;32mI (10059) WebSocket: Received text: {"type": "partial_result", "text": "", "segment": 3}[0m
+[0;32mI (10399) WebSocket: Received text: {"type": "partial_result", "text": "\u5206\u53c9", "segment": 3}[0m
+[0;32mI (10719) WebSocket: Received text: {"type": "partial_result", "text": "\u5206\u53c9\u56de\u6765", "segment": 3}[0m
+[0;32mI (11069) WebSocket: Received text: {"type": "partial_result", "text": "\u5206\u53c9\u56de\u6765\u4e86", "segment": 3}[0m
+[0;32mI (11489) App/Speech: [FEED] Count:100, Samples: -1068, 388, 1, 312[0m
+[0;32mI (11549) App/Speech: [PLAY] Count:200, VAD:语音196/静音4, Vol:0.0 dB, Max:7820, OK:199, Fail:0[0m
+[0;32mI (12659) WebSocket: Received text: {"type": "final_result", "text": "\u5206\u53c9\u56de\u6765\u4e86", "segment": 3, "agent_response": "\u60a8\u597d\uff0c\u6b22\u8fce\u56de\u6765\uff01\u6709\u4ec0\u4e48\u53ef\u4ee5\u5e2e\u60a8\u7684\u5417\uff1f", "has_audio": true, "tts_pending": true}[0m
+[0;32mI (12759) WebSocket: Received text: {"type": "tts_metadata", "total_chunks": 15, "sample_rate": 16000, "segment": 3, "total_duration": 2.39}[0m
+[0;33mW (14659) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (14719) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (14789) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (14849) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (14909) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (14989) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (15049) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (15109) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (15169) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;31mE (15229) i2s_common: i2s_channel_write(1286): The channel is not enabled[0m
+[0;31mE (15229) App/Speech: Play failed: -1[0m
+[0;33mW (15249) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (15299) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (15359) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (15419) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (15499) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;32mI (15529) WebSocket: Received text: {"type": "partial_result", "text": "\u6211\u5c31", "segment": 4}[0m
+[0;32mI (15549) WebSocket: Received text: {"type": "partial_result", "text": "\u6211\u5c31\u662f\u8fd8", "segment": 4}[0m
+[0;32mI (15549) WebSocket: Received text: {"type": "partial_result", "text": "\u6211\u5c31\u662f\u8fd8\u662f", "segment": 4}[0m
+[0;32mI (15549) WebSocket: Received text: {"type": "partial_result", "text": "\u6211\u5c31\u662f\u8fd8\u662f", "segment": 4}[0m
+[0;33mW (16709) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;32mI (17129) App/Speech: [PLAY] Count:300, VAD:语音296/静音4, Vol:0.0 dB, Max:2070, OK:298, Fail:1[0m
+[0;32mI (17249) WebSocket: Received text: {"type": "final_result", "text": "\u6211\u5c31\u662f\u8fd8\u662f", "segment": 4, "agent_response": "\u60a8\u597d\uff0c\u6b22\u8fce\u56de\u6765\uff01\u8bf7\u95ee\u6709\u4ec0\u4e48\u53ef\u4ee5\u5e2e\u60a8\u7684\u5417\uff1f", "has_audio": true, "tts_pending": true}[0m
+[0;32mI (17359) WebSocket: Received text: {"type": "tts_metadata", "total_chunks": 17, "sample_rate": 16000, "segment": 4, "total_duration": 2.622}[0m
+[0;33mW (17729) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (17789) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (17869) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;32mI (17899) App/Speech: [FEED] Count:200, Samples: 249, -42, -1, -30[0m
+[0;33mW (17929) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (17989) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (18049) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (18119) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (18179) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (18239) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (18299) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (18379) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (18439) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (18499) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (18559) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (18629) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (18689) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (18749) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (18829) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (18889) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (18949) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (19009) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (19079) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (19139) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (19199) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (19259) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (19339) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (19399) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (19459) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (19519) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (19589) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (19649) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (19709) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (19789) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (19849) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (19909) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (19969) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (20039) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (20099) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
