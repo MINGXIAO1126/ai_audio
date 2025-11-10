@@ -1,0 +1,914 @@
+[0;32mI (246) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (247) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (247) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (247) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (247) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (248) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (248) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (248) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (249) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (249) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (250) MSPI Timing: PSRAM timing tuning index: 5[0m
+IP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x42009acf
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x170c
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xe24
+load:0x403cb700,len:0x3198
+entry 0x403c893c
+[0;32mI (32) boot: ESP-IDF v5.4.1-dirty 2nd stage bootloader[0m
+[0;32mI (32) boot: compile time Nov 10 2025 17:33:50[0m
+[0;32mI (32) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v0.2[0m
+[0;32mI (32) boot: efuse block revision: v1.3[0m
+[0;32mI (32) qio_mode: Enabling QIO for flash chip WinBond[0m
+[0;32mI (33) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (33) boot.esp32s3: SPI Mode       : QIO[0m
+[0;32mI (33) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (33) boot: Enabling RNG early entropy source...[0m
+[0;32mI (33) boot: Partition Table:[0m
+[0;32mI (33) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (34) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (34) boot:  1 factory          factory app      00 00 00010000 00300000[0m
+[0;32mI (34) boot:  2 flash_test       Unknown data     01 81 00310000 00084000[0m
+[0;32mI (35) boot:  3 model            Unknown data     01 82 00394000 005c3000[0m
+[0;32mI (35) boot: End of partition table[0m
+[0;32mI (68) esp_image: segment 1: paddr=0003beb4 vaddr=3fc9c900 size=04164h ( 16740) load[0m
+[0;32mI (71) esp_image: segment 2: paddr=00040020 vaddr=42000020 size=f9338h (1020728) map[0m
+[0;32mI (223) esp_image: segment 3: paddr=00139360 vaddr=3fca0a64 size=0347ch ( 13436) load[0m
+[0;32mI (225) esp_image: segment 4: paddr=0013c7e4 vaddr=40374000 size=1884ch (100428) load[0m
+[0;32mI (245) esp_image: segment 5: paddr=00155038 vaddr=600fe100 size=0001ch (    28) load[0m
+[0;32mI (255) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (255) boot: Disabling RNG early entropy source...[0m
+[0;32mI (256) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (256) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (257) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (257) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (257) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (257) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (257) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (258) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (258) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (258) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (259) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (260) MSPI Timing: PSRAM timing tuning index: 5[0m
+[0;32mI (260) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (260) esp_psram: Speed: 80MHz[0m
+[0;32mI (272) mmu_psram: Read only data copied and mapped to SPIRAM[0m
+[0;32mI (342) mmu_psram: Instructions copied and mapped to SPIRAM[0m
+[0;32mI (342) cpu_start: Multicore app[0m
+[0;32mI (599) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (607) cpu_start: Pro cpu start user code[0m
+[0;32mI (607) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (607) app_init: Application information:[0m
+[0;32mI (608) app_init: Project name:     factory_01[0m
+[0;32mI (608) app_init: App version:      4ec7495-dirty[0m
+[0;32mI (608) app_init: Compile time:     Nov 10 2025 17:33:43[0m
+[0;32mI (608) app_init: ELF file SHA256:  f57daaae5...[0m
+[0;32mI (608) app_init: ESP-IDF:          v5.4.1-dirty[0m
+[0;32mI (608) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (609) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (609) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (609) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (609) heap_init: At 3FCA82C8 len 00041448 (261 KiB): RAM[0m
+[0;32mI (609) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (610) heap_init: At 600FE11C len 00001ECC (7 KiB): RTCRAM[0m
+[0;32mI (610) esp_psram: Adding pool of 6976K of PSRAM memory to heap allocator[0m
+[0;32mI (610) spi_flash: detected chip: winbond[0m
+[0;32mI (610) spi_flash: flash io: qio[0m
+[0;32mI (613) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (613) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (614) main_task: Started on CPU0[0m
+[0;32mI (624) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (624) main_task: Calling app_main()[0m
+[0;32mI (624) MIC_LOOPBACK: 
+[0m
+[0;32mI (624) MIC_LOOPBACK: ========================================[0m
+[0;32mI (624) MIC_LOOPBACK:   麦克风实时回声测试程序 (AFE版本)[0m
+[0;32mI (624) MIC_LOOPBACK:   Microphone Loopback with AFE[0m
+[0;32mI (624) MIC_LOOPBACK: ========================================
+[0m
+[0;32mI (624) MIC_LOOPBACK: 1. Initializing board hardware...[0m
+[0;33mW (624) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+[0;32mI (624) board: I2C bus initialized successfully[0m
+[0;32mI (634) ES7210: Work in Slave mode[0m
+[0;32mI (634) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (644) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (644) ES7210: Enable ES7210_INPUT_MIC3[0m
+[0;32mI (644) ES7210: Enable ES7210_INPUT_MIC4[0m
+[0;32mI (644) ES7210: Enable TDM mode[0m
+[0;32mI (654) I2S_IF: channel mode 0 bits:32/32 channel:2 mask:3[0m
+[0;32mI (654) I2S_IF: STD Mode 0 bits:32/32 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (654) ES7210: Bits 16[0m
+[0;32mI (664) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (664) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (664) ES7210: Enable ES7210_INPUT_MIC3[0m
+[0;32mI (664) ES7210: Enable ES7210_INPUT_MIC4[0m
+[0;32mI (674) ES7210: Enable TDM mode[0m
+[0;32mI (674) ES7210: Unmuted[0m
+[0;32mI (674) Adev_Codec: Open codec device OK[0m
+[0;32mI (684) ES8311: Work in Slave mode[0m
+[0;31mE (694) I2S_IF: Mode 1 conflict sample_rate 16000 with 0[0m
+[0;32mI (704) Adev_Codec: Open codec device OK[0m
+[0;32mI (704) MIC_LOOPBACK:    Board initialized (16kHz, 2ch, 16bit)
+[0m
+[0;32mI (704) MIC_LOOPBACK: 2. Initializing TCA9555 I/O expander...[0m
+[0;32mI (704) MIC_LOOPBACK:   I/O expander initialized
+[0m
+[0;32mI (704) MIC_LOOPBACK: 3. Enabling power amplifier...[0m
+[0;32mI (804) MIC_LOOPBACK:   Power amplifier enabled
+[0m
+[0;32mI (804) MIC_LOOPBACK: 4. Setting speaker volume to 70%...[0m
+[0;32mI (804) MIC_LOOPBACK:   Speaker volume set
+[0m
+[0;32mI (804) MIC_LOOPBACK: 5. Initializing WiFi and WebSocket...[0m
+[0;32mI (804) WebSocket: 
+========================================[0m
+[0;32mI (804) WebSocket:   WebSocket Audio Streaming Init[0m
+[0;32mI (804) WebSocket: ========================================[0m
+[0;32mI (804) WebSocket: Audio RX queue created (size: 10)[0m
+[0;32mI (804) WebSocket: Audio RX play task created[0m
+[0;32mI (804) WebSocket: Audio RX play task started[0m
+[0;32mI (804) WebSocket: 1. Initializing WiFi...[0m
+[0;32mI (804) pp: pp rom version: e7ae62f[0m
+[0;32mI (804) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (814) wifi:wifi driver task: 3fcc2610, prio:23, stack:6656, core=0[0m
+[0;32mI (814) wifi:wifi firmware version: 79fa3f41ba[0m
+[0;32mI (814) wifi:wifi certification version: v7.0[0m
+[0;32mI (814) wifi:config NVS flash: enabled[0m
+[0;32mI (814) wifi:config nano formatting: disabled[0m
+[0;32mI (814) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (814) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (814) wifi:Init management short buffer num: 32[0m
+[0;32mI (814) wifi:Init static tx buffer num: 16[0m
+[0;32mI (814) wifi:Init tx cache buffer num: 32[0m
+[0;32mI (814) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (814) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (814) wifi:Init static rx buffer num: 10[0m
+[0;32mI (814) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (814) wifi_init: rx ba win: 6[0m
+[0;32mI (814) wifi_init: accept mbox: 6[0m
+[0;32mI (814) wifi_init: tcpip mbox: 32[0m
+[0;32mI (814) wifi_init: udp mbox: 6[0m
+[0;32mI (814) wifi_init: tcp mbox: 6[0m
+[0;32mI (824) wifi_init: tcp tx win: 5760[0m
+[0;32mI (824) wifi_init: tcp rx win: 5760[0m
+[0;32mI (824) wifi_init: tcp mss: 1440[0m
+[0;32mI (824) wifi_init: WiFi/LWIP prefer SPIRAM[0m
+[0;32mI (824) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (824) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (824) phy_init: phy_version 700,8582a7fd,Feb 10 2025,20:13:11[0m
+[0;32mI (874) wifi:mode : sta (80:b5:4e:da:76:e0)[0m
+[0;32mI (874) wifi:enable tsf[0m
+[0;32mI (874) WebSocket: WiFi initialization finished.[0m
+[0;32mI (874) WebSocket: WiFi STA started, connecting...[0m
+[0;32mI (874) WebSocket: Connecting to SSID: Chenhh[0m
+[0;32mI (874) wifi:new:<1,1>, old:<1,0>, ap:<255,255>, sta:<1,1>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (884) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (934) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (934) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (954) wifi:state: run -> init (0x2a0)[0m
+[0;32mI (964) wifi:new:<1,0>, old:<1,1>, ap:<255,255>, sta:<1,1>, prof:1, snd_ch_cfg:0x0[0m
+[0;33mW (964) WebSocket: Retry to connect to WiFi... (1/5)[0m
+[0;33mW (3364) WebSocket: Retry to connect to WiFi... (2/5)[0m
+[0;32mI (3384) wifi:new:<1,1>, old:<1,0>, ap:<255,255>, sta:<1,1>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (3384) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (3394) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (3424) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (3584) wifi:connected with Chenhh, aid = 1, channel 1, 40U, bssid = 04:f1:69:d6:88:7c[0m
+[0;32mI (3584) wifi:security: WPA2-PSK, phy: bgn, rssi: -70[0m
+[0;32mI (3584) wifi:pm start, type: 1[0m
+
+[0;32mI (3584) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (3584) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (3684) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (4894) esp_netif_handlers: sta ip: 192.168.2.7, mask: 255.255.255.0, gw: 192.168.2.1[0m
+[0;32mI (4894) WebSocket: Got IP Address: 192.168.2.7[0m
+[0;32mI (4894) WebSocket: ✓ Connected to WiFi SSID: Chenhh[0m
+[0;32mI (4894) WebSocket: 
+2. Initializing WebSocket...[0m
+[0;32mI (4894) WebSocket: Initializing WebSocket client...[0m
+[0;32mI (4894) WebSocket: WebSocket URI: ws://192.168.2.247:6006/ws[0m
+[0;32mI (4894) websocket_client: Started[0m
+[0;32mI (4894) WebSocket: WebSocket client started successfully[0m
+[0;32mI (5064) wifi:<ba-add>idx:0 (ifx:0, 04:f1:69:d6:88:7c), tid:0, ssn:1, winSize:64[0m
+[0;32mI (5064) WebSocket: WebSocket connected to server[0m
+[0;32mI (5094) WebSocket: ✓ WebSocket connected successfully[0m
+[0;32mI (5094) WebSocket: 
+========================================[0m
+[0;32mI (5094) WebSocket:   WebSocket initialization complete![0m
+[0;32mI (5094) WebSocket:   Bidirectional audio streaming enabled[0m
+[0;32mI (5094) WebSocket: ========================================
+[0m
+[0;32mI (5094) MIC_LOOPBACK:    ✓ WebSocket initialized
+[0m
+[0;32mI (5094) MIC_LOOPBACK: 5. Starting AFE audio loopback...[0m
+[0;32mI (5094) App/Speech: 
+========== Audio Capture and Process with AFE Init ==========[0m
+[0;33mW (5094) AFE_CONFIG: wakenet model not found. please load wakenet model...[0m
+[0;32mI (5094) App/Speech: AFE Linear Gain: 10.0 (提高麦克风灵敏度)[0m
+[0;32mI (5094) App/Speech: AGC: Compression=15 dB, Target=-6 dBFS[0m
+[0;32mI (5094) App/Speech: AEC Filter Length: 4[0m
+[0;32mI (5094) App/Speech: AFE Config:[0m
+[0;32mI (5094) App/Speech:    AEC (Acoustic Echo Cancellation)[0m
+[0;32mI (5094) App/Speech:    SE (Speech Enhancement)[0m
+[0;32mI (5094) App/Speech:    NS (Noise Suppression)[0m
+[0;32mI (5094) App/Speech:    VAD (Voice Activity Detection) - Mode: 3[0m
+[0;32mI (5094) App/Speech:    AGC (Automatic Gain Control)[0m
+[0;32mI (5094) App/Speech:    WakeNet (Disabled)[0m
+[0;32mI (5094) App/Speech:    MultiNet (Disabled)[0m
+[0;32mI (5094) App/Speech: [0m
+[0;32mI (5094) App/Speech: Audio Processing:[0m
+[0;32mI (5094) App/Speech:    VAD Filter: 启用 (只发送人声到服务器)[0m
+[0;32mI (5094) App/Speech:    WebSocket Stream: 启用 (需配置WiFi)[0m
+[0;32mI (5094) App/Speech:    Local Playback: 禁用（仅发送到服务器）[0m
+[0;32mI (5214) AFE: AFE Version: (2MIC_V250113)[0m
+[0;32mI (5214) AFE: Input PCM Config: total 4 channels(2 microphone, 1 playback), sample rate:16000[0m
+[0;32mI (5214) AFE: AFE Pipeline: [input] -> |AEC(SR_LOW_COST)| -> |SE(BSS)| -> |VAD(WebRTC)| -> [output][0m
+[0;32mI (5214) App/Speech: Starting AFE audio capture and process tasks...[0m
+[0;32mI (5214) App/Speech: === Loopback Detect Task Started ===[0m
+[0;32mI (5214) App/Speech: AFE chunk size: 512 samples[0m
+[0;32mI (5214) App/Speech: VAD Filter: ENABLED (只发送人声到服务器)[0m
+[0;32mI (5314) App/Speech: === Loopback Feed Task Started ===[0m
+[0;32mI (5314) App/Speech: Chunk size: 1024 samples, Channels: 4[0m
+[0;32mI (5324) App/Speech: ========== AFE Audio Capture Init Complete ==========
+[0m
+[0;32mI (5324) MIC_LOOPBACK:    ✓ AFE loopback started
+[0m
+[0;32mI (5324) MIC_LOOPBACK: ========================================[0m
+[0;32mI (5324) MIC_LOOPBACK:   系统初始化完成！[0m
+[0;32mI (5324) MIC_LOOPBACK:   对着麦克风说话，应该能听到高质量回声[0m
+[0;32mI (5324) MIC_LOOPBACK:   (经过AEC/SE/NS/VAD/AGC算法处理)[0m
+[0;32mI (5324) MIC_LOOPBACK: ========================================
+[0m
+[0;32mI (10254) WebSocket: Received text: {"type": "partial_result", "text": "\u4f60", "segment": 0}[0m
+[0;32mI (10464) WebSocket: Received text: {"type": "partial_result", "text": "\u4f60\u597d", "segment": 0}[0m
+[0;32mI (11004) WebSocket: Received text: {"type": "partial_result", "text": "\u4f60\u597d", "segment": 0}[0m
+[0;32mI (11224) WebSocket: Received text: {"type": "partial_result", "text": "\u4f60\u597d", "segment": 0}[0m
+[0;32mI (11634) App/Speech: [FEED] Count:100, Samples: 1, 49, -1, 40[0m
+[0;32mI (13104) WebSocket: Received text: {"type": "final_result", "text": "\u4f60\u597d", "segment": 0, "agent_response": "\u60a8\u597d\uff01\u6b22\u8fce\u5149\u4e34\uff0c\u6709\u4ec0\u4e48\u53ef\u4ee5\u5e2e\u60a8\u5417\uff1f", "has_audio": true, "tts_pending": true}[0m
+[0;32mI (13174) WebSocket: Received text: {"type": "tts_metadata", "total_chunks": 14, "sample_rate": 16000, "segment": 0, "total_duration": 2.143875}[0m
+[0;32mI (18034) App/Speech: [FEED] Count:200, Samples: 285, -33, -2, -28[0m
+[0;32mI (20314) WebSocket: Received text: {"type": "partial_result", "text": "", "segment": 1}[0m
+[0;33mW (21064) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (21144) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (21204) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (21264) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (21324) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (21394) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (21454) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (21514) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (21574) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (21654) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (21714) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (21774) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (21904) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (21964) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;32mI (22024) WebSocket: Received text: {"type": "partial_result", "text": "", "segment": 1}[0m
+[0;33mW (22104) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (22164) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (22284) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (22414) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (22534) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (22614) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (22674) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (22734) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (22804) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (22924) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (22984) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (23064) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;32mI (23064) WebSocket: Received text: {"type": "partial_result", "text": "", "segment": 1}[0m
+[0;33mW (23184) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (23244) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (23374) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (23434) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (23494) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (23574) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (23634) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (23824) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (23884) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (24024) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (24084) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (24144) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;32mI (24174) WebSocket: Received text: {"type": "partial_result", "text": "", "segment": 1}[0m
+[0;33mW (24274) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (24334) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;32mI (24424) App/Speech: [FEED] Count:300, Samples: 101, 26, -2, 50[0m
+[0;33mW (24454) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (24594) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (24654) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (24724) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (24784) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (24844) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (24904) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (24984) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (25044) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (25104) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (25164) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (25234) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (25294) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (25354) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (25414) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (25494) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (25554) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (25614) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (25684) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (25744) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (25864) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (25944) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (26004) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (26064) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (26124) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (26194) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;33mW (26254) AFE: Ringbuffer of AFE(FEED) is full, Please use fetch() to read data to avoid data loss or overwriting[0m
+[0;32mI (26294) App/Speech: [SEND] Count:500, VAD:语音150/静音350, Vol:0.0 dB, OK:150, Fail:0[0m
+[0;31mE (26824) websocket_client: Websocket client is not connected[0m
+[0;31mE (26824) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (26824) websocket_client: Websocket client is not connected[0m
+[0;31mE (26824) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (26904) websocket_client: Websocket client is not connected[0m
+[0;31mE (26904) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (26904) websocket_client: Websocket client is not connected[0m
+[0;31mE (26904) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (26964) websocket_client: Websocket client is not connected[0m
+[0;31mE (26964) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (26964) websocket_client: Websocket client is not connected[0m
+[0;31mE (26964) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (27024) websocket_client: Websocket client is not connected[0m
+[0;31mE (27024) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (27024) websocket_client: Websocket client is not connected[0m
+[0;31mE (27024) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (27084) websocket_client: Websocket client is not connected[0m
+[0;31mE (27084) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (27084) websocket_client: Websocket client is not connected[0m
+[0;31mE (27084) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (27154) websocket_client: Websocket client is not connected[0m
+[0;31mE (27154) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (27154) websocket_client: Websocket client is not connected[0m
+[0;31mE (27154) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (27214) websocket_client: Websocket client is not connected[0m
+[0;31mE (27214) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (27214) websocket_client: Websocket client is not connected[0m
+[0;31mE (27214) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (27274) websocket_client: Websocket client is not connected[0m
+[0;31mE (27274) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (27274) websocket_client: Websocket client is not connected[0m
+[0;31mE (27274) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (27334) websocket_client: Websocket client is not connected[0m
+[0;31mE (27334) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (27334) websocket_client: Websocket client is not connected[0m
+[0;31mE (27334) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (27414) websocket_client: Websocket client is not connected[0m
+[0;31mE (27414) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (27414) websocket_client: Websocket client is not connected[0m
+[0;31mE (27414) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (27474) websocket_client: Websocket client is not connected[0m
+[0;31mE (27474) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (27474) websocket_client: Websocket client is not connected[0m
+[0;31mE (27474) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (27534) websocket_client: Websocket client is not connected[0m
+[0;31mE (27534) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (27534) websocket_client: Websocket client is not connected[0m
+[0;31mE (27534) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (27604) websocket_client: Websocket client is not connected[0m
+[0;31mE (27604) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (27604) websocket_client: Websocket client is not connected[0m
+[0;31mE (27604) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (27664) websocket_client: Websocket client is not connected[0m
+[0;31mE (27664) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (27664) websocket_client: Websocket client is not connected[0m
+[0;31mE (27664) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (27724) websocket_client: Websocket client is not connected[0m
+[0;31mE (27724) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (27724) websocket_client: Websocket client is not connected[0m
+[0;31mE (27724) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (27784) websocket_client: Websocket client is not connected[0m
+[0;31mE (27784) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (27784) websocket_client: Websocket client is not connected[0m
+[0;31mE (27784) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (27864) websocket_client: Websocket client is not connected[0m
+[0;31mE (27864) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (27864) websocket_client: Websocket client is not connected[0m
+[0;31mE (27864) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (27924) websocket_client: Websocket client is not connected[0m
+[0;31mE (27924) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (27924) websocket_client: Websocket client is not connected[0m
+[0;31mE (27924) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (27984) websocket_client: Websocket client is not connected[0m
+[0;31mE (27984) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (27984) websocket_client: Websocket client is not connected[0m
+[0;31mE (27984) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (28044) websocket_client: Websocket client is not connected[0m
+[0;31mE (28044) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (28044) websocket_client: Websocket client is not connected[0m
+[0;31mE (28044) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (28114) websocket_client: Websocket client is not connected[0m
+[0;31mE (28114) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (28114) websocket_client: Websocket client is not connected[0m
+[0;31mE (28114) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (28174) websocket_client: Websocket client is not connected[0m
+[0;31mE (28174) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (28174) websocket_client: Websocket client is not connected[0m
+[0;31mE (28174) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (28234) websocket_client: Websocket client is not connected[0m
+[0;31mE (28234) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (28234) websocket_client: Websocket client is not connected[0m
+[0;31mE (28234) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (28294) websocket_client: Websocket client is not connected[0m
+[0;31mE (28294) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (28294) websocket_client: Websocket client is not connected[0m
+[0;31mE (28294) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (28374) websocket_client: Websocket client is not connected[0m
+[0;31mE (28374) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (28374) websocket_client: Websocket client is not connected[0m
+[0;31mE (28374) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (28434) websocket_client: Websocket client is not connected[0m
+[0;31mE (28434) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (28434) websocket_client: Websocket client is not connected[0m
+[0;31mE (28434) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (28494) websocket_client: Websocket client is not connected[0m
+[0;31mE (28494) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (28494) websocket_client: Websocket client is not connected[0m
+[0;31mE (28494) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (28564) websocket_client: Websocket client is not connected[0m
+[0;31mE (28564) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (28564) websocket_client: Websocket client is not connected[0m
+[0;31mE (28564) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (28624) websocket_client: Websocket client is not connected[0m
+[0;31mE (28624) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (28624) websocket_client: Websocket client is not connected[0m
+[0;31mE (28624) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (28684) websocket_client: Websocket client is not connected[0m
+[0;31mE (28684) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (28684) websocket_client: Websocket client is not connected[0m
+[0;31mE (28684) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (28744) websocket_client: Websocket client is not connected[0m
+[0;31mE (28744) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (28744) websocket_client: Websocket client is not connected[0m
+[0;31mE (28744) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (28824) websocket_client: Websocket client is not connected[0m
+[0;31mE (28824) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (28824) websocket_client: Websocket client is not connected[0m
+[0;31mE (28824) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (28884) websocket_client: Websocket client is not connected[0m
+[0;31mE (28884) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (28884) websocket_client: Websocket client is not connected[0m
+[0;31mE (28884) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (28944) websocket_client: Websocket client is not connected[0m
+[0;31mE (28944) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (28944) websocket_client: Websocket client is not connected[0m
+[0;31mE (28944) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (29004) websocket_client: Websocket client is not connected[0m
+[0;31mE (29004) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (29004) websocket_client: Websocket client is not connected[0m
+[0;31mE (29004) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (29074) websocket_client: Websocket client is not connected[0m
+[0;31mE (29074) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (29074) websocket_client: Websocket client is not connected[0m
+[0;31mE (29074) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (29134) websocket_client: Websocket client is not connected[0m
+[0;31mE (29134) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (29134) websocket_client: Websocket client is not connected[0m
+[0;31mE (29134) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (29194) websocket_client: Websocket client is not connected[0m
+[0;31mE (29194) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (29194) websocket_client: Websocket client is not connected[0m
+[0;31mE (29194) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (29254) websocket_client: Websocket client is not connected[0m
+[0;31mE (29254) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (29254) websocket_client: Websocket client is not connected[0m
+[0;31mE (29254) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (29334) websocket_client: Websocket client is not connected[0m
+[0;31mE (29334) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (29334) websocket_client: Websocket client is not connected[0m
+[0;31mE (29334) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (29394) websocket_client: Websocket client is not connected[0m
+[0;31mE (29394) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (29394) websocket_client: Websocket client is not connected[0m
+[0;31mE (29394) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (29454) websocket_client: Websocket client is not connected[0m
+[0;31mE (29454) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (29454) websocket_client: Websocket client is not connected[0m
+[0;31mE (29454) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (29524) websocket_client: Websocket client is not connected[0m
+[0;31mE (29524) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (29524) websocket_client: Websocket client is not connected[0m
+[0;31mE (29524) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (29584) websocket_client: Websocket client is not connected[0m
+[0;31mE (29584) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (29584) websocket_client: Websocket client is not connected[0m
+[0;31mE (29584) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (29644) websocket_client: Websocket client is not connected[0m
+[0;31mE (29644) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (29644) websocket_client: Websocket client is not connected[0m
+[0;31mE (29644) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (29704) websocket_client: Websocket client is not connected[0m
+[0;31mE (29704) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (29704) websocket_client: Websocket client is not connected[0m
+[0;31mE (29704) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (29784) websocket_client: Websocket client is not connected[0m
+[0;31mE (29784) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (29784) websocket_client: Websocket client is not connected[0m
+[0;31mE (29784) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (29844) websocket_client: Websocket client is not connected[0m
+[0;31mE (29844) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (29844) websocket_client: Websocket client is not connected[0m
+[0;31mE (29844) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (29904) websocket_client: Websocket client is not connected[0m
+[0;31mE (29904) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (29904) websocket_client: Websocket client is not connected[0m
+[0;31mE (29904) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (29964) websocket_client: Websocket client is not connected[0m
+[0;31mE (29964) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (29964) websocket_client: Websocket client is not connected[0m
+[0;31mE (29964) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (30034) websocket_client: Websocket client is not connected[0m
+[0;31mE (30034) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (30034) websocket_client: Websocket client is not connected[0m
+[0;31mE (30034) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (30094) websocket_client: Websocket client is not connected[0m
+[0;31mE (30094) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (30094) websocket_client: Websocket client is not connected[0m
+[0;31mE (30094) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (30154) websocket_client: Websocket client is not connected[0m
+[0;31mE (30154) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (30154) websocket_client: Websocket client is not connected[0m
+[0;31mE (30154) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (30214) websocket_client: Websocket client is not connected[0m
+[0;31mE (30214) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (30214) websocket_client: Websocket client is not connected[0m
+[0;31mE (30214) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (30294) websocket_client: Websocket client is not connected[0m
+[0;31mE (30294) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (30294) websocket_client: Websocket client is not connected[0m
+[0;31mE (30294) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (30354) websocket_client: Websocket client is not connected[0m
+[0;31mE (30354) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (30354) websocket_client: Websocket client is not connected[0m
+[0;31mE (30354) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (30414) websocket_client: Websocket client is not connected[0m
+[0;31mE (30414) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (30414) websocket_client: Websocket client is not connected[0m
+[0;31mE (30414) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (30484) websocket_client: Websocket client is not connected[0m
+[0;31mE (30484) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (30484) websocket_client: Websocket client is not connected[0m
+[0;31mE (30484) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (30544) websocket_client: Websocket client is not connected[0m
+[0;31mE (30544) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (30544) websocket_client: Websocket client is not connected[0m
+[0;31mE (30544) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (30604) websocket_client: Websocket client is not connected[0m
+[0;31mE (30604) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (30604) websocket_client: Websocket client is not connected[0m
+[0;31mE (30604) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (30664) websocket_client: Websocket client is not connected[0m
+[0;31mE (30664) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (30664) websocket_client: Websocket client is not connected[0m
+[0;31mE (30664) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (30744) websocket_client: Websocket client is not connected[0m
+[0;31mE (30744) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (30744) websocket_client: Websocket client is not connected[0m
+[0;31mE (30744) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (30804) websocket_client: Websocket client is not connected[0m
+[0;31mE (30804) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (30804) websocket_client: Websocket client is not connected[0m
+[0;31mE (30804) WebSocket: Failed to send audio data via WebSocket[0m
+[0;32mI (30834) App/Speech: [FEED] Count:400, Samples: 120, -57, 2, -36[0m
+[0;31mE (30864) websocket_client: Websocket client is not connected[0m
+[0;31mE (30864) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (30864) websocket_client: Websocket client is not connected[0m
+[0;31mE (30864) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (30924) websocket_client: Websocket client is not connected[0m
+[0;31mE (30924) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (30924) websocket_client: Websocket client is not connected[0m
+[0;31mE (30924) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (30994) websocket_client: Websocket client is not connected[0m
+[0;31mE (30994) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (30994) websocket_client: Websocket client is not connected[0m
+[0;31mE (30994) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (31054) websocket_client: Websocket client is not connected[0m
+[0;31mE (31054) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (31054) websocket_client: Websocket client is not connected[0m
+[0;31mE (31054) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (31114) websocket_client: Websocket client is not connected[0m
+[0;31mE (31114) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (31114) websocket_client: Websocket client is not connected[0m
+[0;31mE (31114) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (31174) websocket_client: Websocket client is not connected[0m
+[0;31mE (31174) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (31174) websocket_client: Websocket client is not connected[0m
+[0;31mE (31174) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (31254) websocket_client: Websocket client is not connected[0m
+[0;31mE (31254) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (31254) websocket_client: Websocket client is not connected[0m
+[0;31mE (31254) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (31314) websocket_client: Websocket client is not connected[0m
+[0;31mE (31314) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (31314) websocket_client: Websocket client is not connected[0m
+[0;31mE (31314) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (31374) websocket_client: Websocket client is not connected[0m
+[0;31mE (31374) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (31374) websocket_client: Websocket client is not connected[0m
+[0;31mE (31374) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (31444) websocket_client: Websocket client is not connected[0m
+[0;31mE (31444) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (31444) websocket_client: Websocket client is not connected[0m
+[0;31mE (31444) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (31504) websocket_client: Websocket client is not connected[0m
+[0;31mE (31504) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (31504) websocket_client: Websocket client is not connected[0m
+[0;31mE (31504) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (31564) websocket_client: Websocket client is not connected[0m
+[0;31mE (31564) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (31564) websocket_client: Websocket client is not connected[0m
+[0;31mE (31564) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (31624) websocket_client: Websocket client is not connected[0m
+[0;31mE (31624) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (31624) websocket_client: Websocket client is not connected[0m
+[0;31mE (31624) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (31704) websocket_client: Websocket client is not connected[0m
+[0;31mE (31704) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (31704) websocket_client: Websocket client is not connected[0m
+[0;31mE (31704) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (31764) websocket_client: Websocket client is not connected[0m
+[0;31mE (31764) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (31764) websocket_client: Websocket client is not connected[0m
+[0;31mE (31764) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (31824) websocket_client: Websocket client is not connected[0m
+[0;31mE (31824) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (31824) websocket_client: Websocket client is not connected[0m
+[0;31mE (31824) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (31884) websocket_client: Websocket client is not connected[0m
+[0;31mE (31884) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (31884) websocket_client: Websocket client is not connected[0m
+[0;31mE (31884) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (31954) websocket_client: Websocket client is not connected[0m
+[0;31mE (31954) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (31954) websocket_client: Websocket client is not connected[0m
+[0;31mE (31954) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (32014) websocket_client: Websocket client is not connected[0m
+[0;31mE (32014) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (32014) websocket_client: Websocket client is not connected[0m
+[0;31mE (32014) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (32074) websocket_client: Websocket client is not connected[0m
+[0;31mE (32074) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (32074) websocket_client: Websocket client is not connected[0m
+[0;31mE (32074) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (32134) websocket_client: Websocket client is not connected[0m
+[0;31mE (32134) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (32134) websocket_client: Websocket client is not connected[0m
+[0;31mE (32134) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (32214) websocket_client: Websocket client is not connected[0m
+[0;31mE (32214) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (32214) websocket_client: Websocket client is not connected[0m
+[0;31mE (32214) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (32274) websocket_client: Websocket client is not connected[0m
+[0;31mE (32274) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (32274) websocket_client: Websocket client is not connected[0m
+[0;31mE (32274) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (32334) websocket_client: Websocket client is not connected[0m
+[0;31mE (32334) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (32334) websocket_client: Websocket client is not connected[0m
+[0;31mE (32334) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (32404) websocket_client: Websocket client is not connected[0m
+[0;31mE (32404) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (32404) websocket_client: Websocket client is not connected[0m
+[0;31mE (32404) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (32464) websocket_client: Websocket client is not connected[0m
+[0;31mE (32464) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (32464) websocket_client: Websocket client is not connected[0m
+[0;31mE (32464) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (32524) websocket_client: Websocket client is not connected[0m
+[0;31mE (32524) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (32524) websocket_client: Websocket client is not connected[0m
+[0;31mE (32524) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (32584) websocket_client: Websocket client is not connected[0m
+[0;31mE (32584) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (32584) websocket_client: Websocket client is not connected[0m
+[0;31mE (32584) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (32664) websocket_client: Websocket client is not connected[0m
+[0;31mE (32664) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (32664) websocket_client: Websocket client is not connected[0m
+[0;31mE (32664) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (32724) websocket_client: Websocket client is not connected[0m
+[0;31mE (32724) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (32724) websocket_client: Websocket client is not connected[0m
+[0;31mE (32724) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (32784) websocket_client: Websocket client is not connected[0m
+[0;31mE (32784) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (32784) websocket_client: Websocket client is not connected[0m
+[0;31mE (32784) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (32844) websocket_client: Websocket client is not connected[0m
+[0;31mE (32844) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (32844) websocket_client: Websocket client is not connected[0m
+[0;31mE (32844) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (32914) websocket_client: Websocket client is not connected[0m
+[0;31mE (32914) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (32914) websocket_client: Websocket client is not connected[0m
+[0;31mE (32914) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (32974) websocket_client: Websocket client is not connected[0m
+[0;31mE (32974) WebSocket: Failed to send audio data via WebSocket[0m
+[0;32mI (37234) App/Speech: [FEED] Count:500, Samples: 186, 14, 2, 12[0m
+[0;31mE (37584) websocket_client: Websocket client is not connected[0m
+[0;31mE (37584) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (37584) websocket_client: Websocket client is not connected[0m
+[0;31mE (37584) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (37644) websocket_client: Websocket client is not connected[0m
+[0;31mE (37644) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (37644) websocket_client: Websocket client is not connected[0m
+[0;31mE (37644) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (37714) websocket_client: Websocket client is not connected[0m
+[0;31mE (37714) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (37714) websocket_client: Websocket client is not connected[0m
+[0;31mE (37714) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (37774) websocket_client: Websocket client is not connected[0m
+[0;31mE (37774) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (37774) websocket_client: Websocket client is not connected[0m
+[0;31mE (37774) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (37834) websocket_client: Websocket client is not connected[0m
+[0;31mE (37834) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (37834) websocket_client: Websocket client is not connected[0m
+[0;31mE (37834) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (37894) websocket_client: Websocket client is not connected[0m
+[0;31mE (37894) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (37894) websocket_client: Websocket client is not connected[0m
+[0;31mE (37894) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (37974) websocket_client: Websocket client is not connected[0m
+[0;31mE (37974) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (37974) websocket_client: Websocket client is not connected[0m
+[0;31mE (37974) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (38034) websocket_client: Websocket client is not connected[0m
+[0;31mE (38034) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (38034) websocket_client: Websocket client is not connected[0m
+[0;31mE (38034) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (38094) websocket_client: Websocket client is not connected[0m
+[0;31mE (38094) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (38094) websocket_client: Websocket client is not connected[0m
+[0;31mE (38094) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (38164) websocket_client: Websocket client is not connected[0m
+[0;31mE (38164) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (38164) websocket_client: Websocket client is not connected[0m
+[0;31mE (38164) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (38224) websocket_client: Websocket client is not connected[0m
+[0;31mE (38224) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (38224) websocket_client: Websocket client is not connected[0m
+[0;31mE (38224) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (38284) websocket_client: Websocket client is not connected[0m
+[0;31mE (38284) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (38284) websocket_client: Websocket client is not connected[0m
+[0;31mE (38284) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (38344) websocket_client: Websocket client is not connected[0m
+[0;31mE (38344) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (38344) websocket_client: Websocket client is not connected[0m
+[0;31mE (38344) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (38424) websocket_client: Websocket client is not connected[0m
+[0;31mE (38424) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (38424) websocket_client: Websocket client is not connected[0m
+[0;31mE (38424) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (38484) websocket_client: Websocket client is not connected[0m
+[0;31mE (38484) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (38484) websocket_client: Websocket client is not connected[0m
+[0;31mE (38484) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (38544) websocket_client: Websocket client is not connected[0m
+[0;31mE (38544) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (38544) websocket_client: Websocket client is not connected[0m
+[0;31mE (38544) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (38604) websocket_client: Websocket client is not connected[0m
+[0;31mE (38604) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (38604) websocket_client: Websocket client is not connected[0m
+[0;31mE (38604) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (38674) websocket_client: Websocket client is not connected[0m
+[0;31mE (38674) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (38674) websocket_client: Websocket client is not connected[0m
+[0;31mE (38674) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (38734) websocket_client: Websocket client is not connected[0m
+[0;31mE (38734) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (38734) websocket_client: Websocket client is not connected[0m
+[0;31mE (38734) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (38794) websocket_client: Websocket client is not connected[0m
+[0;31mE (38794) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (38794) websocket_client: Websocket client is not connected[0m
+[0;31mE (38794) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (38854) websocket_client: Websocket client is not connected[0m
+[0;31mE (38854) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (38854) websocket_client: Websocket client is not connected[0m
+[0;31mE (38854) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (38934) websocket_client: Websocket client is not connected[0m
+[0;31mE (38934) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (38934) websocket_client: Websocket client is not connected[0m
+[0;31mE (38934) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (38994) websocket_client: Websocket client is not connected[0m
+[0;31mE (38994) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (38994) websocket_client: Websocket client is not connected[0m
+[0;31mE (38994) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (39054) websocket_client: Websocket client is not connected[0m
+[0;31mE (39054) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (39054) websocket_client: Websocket client is not connected[0m
+[0;31mE (39054) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (39124) websocket_client: Websocket client is not connected[0m
+[0;31mE (39124) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (39124) websocket_client: Websocket client is not connected[0m
+[0;31mE (39124) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (39184) websocket_client: Websocket client is not connected[0m
+[0;31mE (39184) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (39184) websocket_client: Websocket client is not connected[0m
+[0;31mE (39184) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (39244) websocket_client: Websocket client is not connected[0m
+[0;31mE (39244) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (39244) websocket_client: Websocket client is not connected[0m
+[0;31mE (39244) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (39304) websocket_client: Websocket client is not connected[0m
+[0;31mE (39304) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (39304) websocket_client: Websocket client is not connected[0m
+[0;31mE (39304) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (39384) websocket_client: Websocket client is not connected[0m
+[0;31mE (39384) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (39384) websocket_client: Websocket client is not connected[0m
+[0;31mE (39384) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (39444) websocket_client: Websocket client is not connected[0m
+[0;31mE (39444) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (39444) websocket_client: Websocket client is not connected[0m
+[0;31mE (39444) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (39504) websocket_client: Websocket client is not connected[0m
+[0;31mE (39504) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (39504) websocket_client: Websocket client is not connected[0m
+[0;31mE (39504) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (39564) websocket_client: Websocket client is not connected[0m
+[0;31mE (39564) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (39564) websocket_client: Websocket client is not connected[0m
+[0;31mE (39564) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (39634) websocket_client: Websocket client is not connected[0m
+[0;31mE (39634) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (39634) websocket_client: Websocket client is not connected[0m
+[0;31mE (39634) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (39694) websocket_client: Websocket client is not connected[0m
+[0;31mE (39694) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (39694) websocket_client: Websocket client is not connected[0m
+[0;31mE (39694) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (39754) websocket_client: Websocket client is not connected[0m
+[0;31mE (39754) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (39754) websocket_client: Websocket client is not connected[0m
+[0;31mE (39754) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (39814) websocket_client: Websocket client is not connected[0m
+[0;31mE (39814) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (39814) websocket_client: Websocket client is not connected[0m
+[0;31mE (39814) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (39894) websocket_client: Websocket client is not connected[0m
+[0;31mE (39894) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (39894) websocket_client: Websocket client is not connected[0m
+[0;31mE (39894) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (39954) websocket_client: Websocket client is not connected[0m
+[0;31mE (39954) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (39954) websocket_client: Websocket client is not connected[0m
+[0;31mE (39954) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (40014) websocket_client: Websocket client is not connected[0m
+[0;31mE (40014) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (40014) websocket_client: Websocket client is not connected[0m
+[0;31mE (40014) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (40084) websocket_client: Websocket client is not connected[0m
+[0;31mE (40084) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (40084) websocket_client: Websocket client is not connected[0m
+[0;31mE (40084) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (40144) websocket_client: Websocket client is not connected[0m
+[0;31mE (40144) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (40144) websocket_client: Websocket client is not connected[0m
+[0;31mE (40144) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (40204) websocket_client: Websocket client is not connected[0m
+[0;31mE (40204) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (40204) websocket_client: Websocket client is not connected[0m
+[0;31mE (40204) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (40264) websocket_client: Websocket client is not connected[0m
+[0;31mE (40264) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (40264) websocket_client: Websocket client is not connected[0m
+[0;31mE (40264) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (40344) websocket_client: Websocket client is not connected[0m
+[0;31mE (40344) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (40344) websocket_client: Websocket client is not connected[0m
+[0;31mE (40344) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (40404) websocket_client: Websocket client is not connected[0m
+[0;31mE (40404) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (40404) websocket_client: Websocket client is not connected[0m
+[0;31mE (40404) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (40464) websocket_client: Websocket client is not connected[0m
+[0;31mE (40464) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (40464) websocket_client: Websocket client is not connected[0m
+[0;31mE (40464) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (40524) websocket_client: Websocket client is not connected[0m
+[0;31mE (40524) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (40524) websocket_client: Websocket client is not connected[0m
+[0;31mE (40524) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (40594) websocket_client: Websocket client is not connected[0m
+[0;31mE (40594) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (40594) websocket_client: Websocket client is not connected[0m
+[0;31mE (40594) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (40654) websocket_client: Websocket client is not connected[0m
+[0;31mE (40654) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (40654) websocket_client: Websocket client is not connected[0m
+[0;31mE (40654) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (40714) websocket_client: Websocket client is not connected[0m
+[0;31mE (40714) WebSocket: Failed to send audio data via WebSocket[0m
+[0;31mE (40714) websocket_client: Websocket client is not connected[0m
+[0;31mE (40714) WebSocket: Failed to send audio data via WebSocket[0m

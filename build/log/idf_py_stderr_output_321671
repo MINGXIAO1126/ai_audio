@@ -1,0 +1,11 @@
+[0;33m--- esp-idf-monitor 1.8.0 on /dev/ttyACM0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0m--- 0x40056f6f: [0;33mmemcpy[0m[0m in [0;32mROM[0m
+[0m--- 0x4037924e: [0;33mesp_crosscore_isr[0m[0m at [0;32m/home/ubuntu/esp/esp-idf/components/esp_system/crosscore_int.c[0m[0m:[1;31m73[0m
+[0m--- 0x40377bc5: [0;33m_xt_lowint1[0m[0m at [0;32m/home/ubuntu/esp/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x4037bbeb: [0;33mxt_utils_wait_for_intr[0m[0m at [0;32m/home/ubuntu/esp/esp-idf/components/xtensa/include/xt_utils.h[0m[0m:[1;31m82[0m
+[0m--- (inlined by) [0;33mesp_cpu_wait_for_intr[0m[0m at [0;32m/home/ubuntu/esp/esp-idf/components/esp_hw_support/cpu.c[0m[0m:[1;31m55[0m
+[0m--- 0x42003ade: [0;33mesp_vApplicationIdleHook[0m[0m at [0;32m/home/ubuntu/esp/esp-idf/components/esp_system/freertos_hooks.c[0m[0m:[1;31m58[0m
+[0m--- 0x40380e4d: [0;33mprvIdleTask[0m[0m at [0;32m/home/ubuntu/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c[0m[0m:[1;31m4353[0m
+[0m--- 0x4037fc71: [0;33mvPortTaskWrapper[0m[0m at [0;32m/home/ubuntu/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m

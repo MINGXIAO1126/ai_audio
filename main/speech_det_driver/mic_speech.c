@@ -101,6 +101,7 @@ void loopback_feed_task(void *arg)
 }
 
 // 音频处理任务（从AFE获取处理后的音频并发送到服务器）
+//fetch任务
 void loopback_detect_task(void *arg)
 {
     esp_afe_sr_data_t *afe_data = arg;

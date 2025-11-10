@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "factory_01",
-    "project_version":    "f58f99a-dirty",
+    "project_version":    "4ec7495-dirty",
     "project_path":       "/home/ubuntu/esp/proj/ai_board",
     "idf_path":           "/home/ubuntu/esp/esp-idf",
     "build_dir":          "/home/ubuntu/esp/proj/ai_board/build",

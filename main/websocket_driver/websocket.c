@@ -31,10 +31,26 @@ static bool ws_connected = false;
 static esp_websocket_client_handle_t ws_client = NULL;
 
 // ===============================================
+// 音频发送队列和任务（异步发送，避免阻塞 fetch 任务）
+// ===============================================
+#define AUDIO_TX_QUEUE_SIZE    20      // 音频发送队列大小（增大以容纳更多数据包）
+#define AUDIO_TX_BUFFER_SIZE   4096    // 单次发送的最大音频数据大小（字节）
+
+typedef struct {
+    int16_t *data;          // 音频数据（int16_t格式）
+    size_t length;          // 数据长度（字节）
+} audio_tx_item_t;
+
+static QueueHandle_t audio_tx_queue = NULL;
+static TaskHandle_t audio_tx_task_handle = NULL;
+static volatile bool audio_tx_task_running = false;
+
+// ===============================================
 // 音频接收播放队列和任务
 // ===============================================
 #define AUDIO_RX_QUEUE_SIZE    10      // 音频接收队列大小
 #define AUDIO_RX_BUFFER_SIZE   4096    // 单次接收的最大音频数据大小（字节）
+#define AUDIO_RX_MAX_SIZE      (64 * 1024)  // 最大音频数据大小（64KB）
 
 typedef struct {
     uint8_t *data;          // 音频数据（float32格式）
@@ -44,6 +60,11 @@ typedef struct {
 static QueueHandle_t audio_rx_queue = NULL;
 static TaskHandle_t audio_rx_task_handle = NULL;
 static volatile bool audio_rx_task_running = false;
+
+// WebSocket 数据分片缓存
+static uint8_t *ws_fragment_buffer = NULL;
+static size_t ws_fragment_size = 0;
+static size_t ws_fragment_capacity = 0;
 
 // ===============================================
 // WiFi 事件处理
@@ -93,34 +114,121 @@ static void websocket_event_handler(void *handler_args, esp_event_base_t base,
         break;
         
     case WEBSOCKET_EVENT_DATA:
-        // ESP_LOGI(TAG, "WebSocket received data, opcode=%d, len=%d", 
-        //          data->op_code, data->data_len);
+        // ESP_LOGI(TAG, "WebSocket received data, opcode=%d, len=%d, offset=%d, total=%d", 
+        //          data->op_code, data->data_len, data->payload_offset, data->payload_len);
         if (data->op_code == 0x01) {  // Text frame
             ESP_LOGI(TAG, "Received text: %.*s", data->data_len, (char *)data->data_ptr);
         } else if (data->op_code == 0x02) {  // Binary frame (音频数据)
             // 处理接收到的音频数据（float32格式）
             if (audio_rx_queue != NULL && data->data_len > 0) {
-                // 分配内存存储音频数据
-                audio_rx_item_t *item = heap_caps_malloc(sizeof(audio_rx_item_t), MALLOC_CAP_SPIRAM);
-                if (item != NULL) {
-                    item->data = heap_caps_malloc(data->data_len, MALLOC_CAP_SPIRAM);
-                    if (item->data != NULL) {
-                        memcpy(item->data, data->data_ptr, data->data_len);
-                        item->length = data->data_len;
-                        
-                        // 将音频数据放入队列
-                        if (xQueueSend(audio_rx_queue, &item, 0) != pdTRUE) {
-                            // 队列已满，释放内存
-                            ESP_LOGW(TAG, "Audio RX queue full, dropping data");
-                            free(item->data);
+                // 检查数据有效性
+                if (data->data_len > AUDIO_RX_MAX_SIZE) {
+                    ESP_LOGE(TAG, "Audio data too large: %d bytes (max: %d)", data->data_len, AUDIO_RX_MAX_SIZE);
+                    // 清空分片缓存
+                    if (ws_fragment_buffer != NULL) {
+                        free(ws_fragment_buffer);
+                        ws_fragment_buffer = NULL;
+                        ws_fragment_size = 0;
+                        ws_fragment_capacity = 0;
+                    }
+                    break;
+                }
+                
+                // 检查是否是分片数据
+                bool is_fragment = (data->payload_offset > 0 || data->payload_len > data->data_len);
+                bool is_last_fragment = (data->payload_offset + data->data_len >= data->payload_len);
+                
+                if (is_fragment) {
+                    // 处理分片数据
+                    size_t total_size = data->payload_len;
+                    size_t current_offset = data->payload_offset;
+                    size_t current_size = data->data_len;
+                    
+                    // 如果是第一个分片，分配缓存
+                    if (current_offset == 0) {
+                        if (ws_fragment_buffer != NULL) {
+                            free(ws_fragment_buffer);
+                        }
+                        ws_fragment_capacity = total_size;
+                        ws_fragment_buffer = heap_caps_malloc(total_size, MALLOC_CAP_SPIRAM);
+                        if (ws_fragment_buffer == NULL) {
+                            ESP_LOGE(TAG, "Failed to allocate fragment buffer (%d bytes)", total_size);
+                            break;
+                        }
+                        ws_fragment_size = 0;
+                    }
+                    
+                    // 检查缓存是否足够
+                    if (ws_fragment_buffer == NULL || ws_fragment_capacity < total_size) {
+                        ESP_LOGE(TAG, "Fragment buffer not ready or too small");
+                        break;
+                    }
+                    
+                    // 复制当前分片到缓存
+                    if (current_offset + current_size <= total_size) {
+                        memcpy(ws_fragment_buffer + current_offset, data->data_ptr, current_size);
+                        ws_fragment_size = current_offset + current_size;
+                    } else {
+                        ESP_LOGE(TAG, "Fragment offset/size out of range");
+                        free(ws_fragment_buffer);
+                        ws_fragment_buffer = NULL;
+                        ws_fragment_size = 0;
+                        ws_fragment_capacity = 0;
+                        break;
+                    }
+                    
+                    // 如果是最后一个分片，处理完整数据
+                    if (is_last_fragment && ws_fragment_size == total_size) {
+                        // 分配内存存储音频数据
+                        audio_rx_item_t *item = heap_caps_malloc(sizeof(audio_rx_item_t), MALLOC_CAP_SPIRAM);
+                        if (item != NULL) {
+                            item->data = ws_fragment_buffer;
+                            item->length = ws_fragment_size;
+                            
+                            // 重置分片缓存
+                            ws_fragment_buffer = NULL;
+                            ws_fragment_size = 0;
+                            ws_fragment_capacity = 0;
+                            
+                            // 将音频数据放入队列
+                            if (xQueueSend(audio_rx_queue, &item, 0) != pdTRUE) {
+                                // 队列已满，释放内存
+                                ESP_LOGW(TAG, "Audio RX queue full, dropping data (%d bytes)", item->length);
+                                free(item->data);
+                                free(item);
+                            }
+                        } else {
+                            ESP_LOGE(TAG, "Failed to allocate memory for audio RX item");
+                            free(ws_fragment_buffer);
+                            ws_fragment_buffer = NULL;
+                            ws_fragment_size = 0;
+                            ws_fragment_capacity = 0;
+                        }
+                    }
+                } else {
+                    // 非分片数据，直接处理
+                    // 分配内存存储音频数据
+                    audio_rx_item_t *item = heap_caps_malloc(sizeof(audio_rx_item_t), MALLOC_CAP_SPIRAM);
+                    if (item != NULL) {
+                        item->data = heap_caps_malloc(data->data_len, MALLOC_CAP_SPIRAM);
+                        if (item->data != NULL) {
+                            memcpy(item->data, data->data_ptr, data->data_len);
+                            item->length = data->data_len;
+                            
+                            // 将音频数据放入队列
+                            if (xQueueSend(audio_rx_queue, &item, 0) != pdTRUE) {
+                                // 队列已满，释放内存
+                                ESP_LOGW(TAG, "Audio RX queue full, dropping data (%d bytes)", item->length);
+                                free(item->data);
+                                free(item);
+                            }
+                        } else {
+                            ESP_LOGE(TAG, "Failed to allocate memory for audio RX data");
                             free(item);
                         }
                     } else {
-                        ESP_LOGE(TAG, "Failed to allocate memory for audio RX data");
-                        free(item);
+                        ESP_LOGE(TAG, "Failed to allocate memory for audio RX item");
                     }
-                } else {
-                    ESP_LOGE(TAG, "Failed to allocate memory for audio RX item");
                 }
             }
         }
@@ -273,6 +381,61 @@ static esp_err_t websocket_client_init(void)
 }
 
 // ===============================================
+// 音频发送任务（异步发送，避免阻塞 fetch 任务）
+// ===============================================
+static void audio_tx_send_task(void *arg)
+{
+    ESP_LOGI(TAG, "Audio TX send task started");
+    audio_tx_task_running = true;
+    
+    audio_tx_item_t *item = NULL;
+    
+    while (audio_tx_task_running) {
+        // 从队列接收音频数据
+        if (xQueueReceive(audio_tx_queue, &item, portMAX_DELAY) == pdTRUE) {
+            if (item != NULL && item->data != NULL && item->length > 0) {
+                // 检查连接状态
+                if (ws_connected && ws_client != NULL && esp_websocket_client_is_connected(ws_client)) {
+                    // 服务器期望接收 float32 格式的音频数据（范围 -1.0 到 1.0）
+                    // 需要将 int16_t 转换为 float32 并归一化
+                    size_t sample_count = item->length / sizeof(int16_t);
+                    float *float_buffer = heap_caps_malloc(sample_count * sizeof(float), MALLOC_CAP_SPIRAM);
+                    
+                    if (float_buffer != NULL) {
+                        // 转换 int16_t 到 float32，并归一化到 [-1.0, 1.0]
+                        // 公式：float_value = int16_value / 32768.0f
+                        for (size_t i = 0; i < sample_count; i++) {
+                            float_buffer[i] = (float)item->data[i] / 32768.0f;
+                        }
+                        
+                        // 发送二进制数据（opcode 0x02）- float32 格式
+                        // 使用 portMAX_DELAY，因为这是独立任务，不会阻塞 fetch 任务
+                        size_t float_length = sample_count * sizeof(float);
+                        int sent = esp_websocket_client_send_bin(ws_client, (const char*)float_buffer, 
+                                                                 float_length, portMAX_DELAY);
+                        
+                        free(float_buffer);
+                        
+                        if (sent < 0) {
+                            ESP_LOGW(TAG, "Failed to send audio data via WebSocket");
+                        }
+                    } else {
+                        ESP_LOGE(TAG, "Failed to allocate float buffer for audio conversion");
+                    }
+                }
+                
+                // 释放音频数据
+                free(item->data);
+                free(item);
+            }
+        }
+    }
+    
+    ESP_LOGI(TAG, "Audio TX send task exit");
+    vTaskDelete(NULL);
+}
+
+// ===============================================
 // 音频接收播放任务
 // ===============================================
 static void audio_rx_play_task(void *arg)
@@ -355,7 +518,35 @@ esp_err_t websocket_init(void)
     ESP_LOGI(TAG, "  WebSocket Audio Streaming Init");
     ESP_LOGI(TAG, "========================================");
     
-    // 1. 创建音频接收队列
+    // 1. 创建音频发送队列（异步发送，避免阻塞 fetch 任务）
+    if (audio_tx_queue == NULL) {
+        audio_tx_queue = xQueueCreate(AUDIO_TX_QUEUE_SIZE, sizeof(audio_tx_item_t *));
+        if (audio_tx_queue == NULL) {
+            ESP_LOGE(TAG, "Failed to create audio TX queue");
+            return ESP_ERR_NO_MEM;
+        }
+        ESP_LOGI(TAG, "Audio TX queue created (size: %d)", AUDIO_TX_QUEUE_SIZE);
+    }
+    
+    // 2. 创建音频发送任务（异步发送，避免阻塞 fetch 任务）
+    if (audio_tx_task_handle == NULL) {
+        BaseType_t ret = xTaskCreatePinnedToCore(
+            audio_tx_send_task,
+            "audio_tx_send",
+            8 * 1024,  // 8KB 栈空间
+            NULL,
+            4,  // 优先级（低于 fetch 任务）
+            &audio_tx_task_handle,
+            1   // 运行在 Core 1
+        );
+        if (ret != pdPASS) {
+            ESP_LOGE(TAG, "Failed to create audio TX send task");
+            return ESP_ERR_NO_MEM;
+        }
+        ESP_LOGI(TAG, "Audio TX send task created");
+    }
+    
+    // 3. 创建音频接收队列
     if (audio_rx_queue == NULL) {
         audio_rx_queue = xQueueCreate(AUDIO_RX_QUEUE_SIZE, sizeof(audio_rx_item_t *));
         if (audio_rx_queue == NULL) {
@@ -365,7 +556,7 @@ esp_err_t websocket_init(void)
         ESP_LOGI(TAG, "Audio RX queue created (size: %d)", AUDIO_RX_QUEUE_SIZE);
     }
     
-    // 2. 创建音频接收播放任务
+    // 4. 创建音频接收播放任务
     if (audio_rx_task_handle == NULL) {
         BaseType_t ret = xTaskCreatePinnedToCore(
             audio_rx_play_task,
@@ -383,7 +574,7 @@ esp_err_t websocket_init(void)
         ESP_LOGI(TAG, "Audio RX play task created");
     }
     
-    // 3. 初始化 WiFi
+    // 5. 初始化 WiFi
     ESP_LOGI(TAG, "1. Initializing WiFi...");
     esp_err_t ret = wifi_init_sta();
     if (ret != ESP_OK) {
@@ -391,7 +582,7 @@ esp_err_t websocket_init(void)
         return ret;
     }
     
-    // 4. 初始化 WebSocket
+    // 6. 初始化 WebSocket
     ESP_LOGI(TAG, "\n2. Initializing WebSocket...");
     ret = websocket_client_init();
     if (ret != ESP_OK) {
@@ -402,6 +593,7 @@ esp_err_t websocket_init(void)
     ESP_LOGI(TAG, "\n========================================");
     ESP_LOGI(TAG, "  WebSocket initialization complete!");
     ESP_LOGI(TAG, "  Bidirectional audio streaming enabled");
+    ESP_LOGI(TAG, "  Async audio TX (non-blocking)");
     ESP_LOGI(TAG, "========================================\n");
     
     return ESP_OK;
@@ -411,6 +603,35 @@ esp_err_t websocket_deinit(void)
 {
     ws_connected = false;
     wifi_connected = false;
+    
+    // 停止音频发送任务
+    if (audio_tx_task_handle != NULL) {
+        audio_tx_task_running = false;
+        // 等待任务退出（任务会在检查 audio_tx_task_running 后退出）
+        vTaskDelay(pdMS_TO_TICKS(200));
+        // 如果任务还在运行，删除它
+        if (audio_tx_task_handle != NULL) {
+            vTaskDelete(audio_tx_task_handle);
+            audio_tx_task_handle = NULL;
+        }
+        ESP_LOGI(TAG, "Audio TX send task stopped");
+    }
+    
+    // 清空并删除发送队列
+    if (audio_tx_queue != NULL) {
+        audio_tx_item_t *item = NULL;
+        while (xQueueReceive(audio_tx_queue, &item, 0) == pdTRUE) {
+            if (item != NULL) {
+                if (item->data != NULL) {
+                    free(item->data);
+                }
+                free(item);
+            }
+        }
+        vQueueDelete(audio_tx_queue);
+        audio_tx_queue = NULL;
+        ESP_LOGI(TAG, "Audio TX queue deleted");
+    }
     
     // 停止音频接收播放任务
     if (audio_rx_task_handle != NULL) {
@@ -425,7 +646,7 @@ esp_err_t websocket_deinit(void)
         ESP_LOGI(TAG, "Audio RX play task stopped");
     }
     
-    // 清空并删除队列
+    // 清空并删除接收队列
     if (audio_rx_queue != NULL) {
         audio_rx_item_t *item = NULL;
         while (xQueueReceive(audio_rx_queue, &item, 0) == pdTRUE) {
@@ -467,41 +688,36 @@ bool websocket_is_connected(void)
 
 esp_err_t websocket_send_audio(const int16_t *audio_data, size_t length)
 {
-    if (!ws_connected || ws_client == NULL) {
-        // ESP_LOGW(TAG, "WebSocket not connected, skipping audio data");
+    if (!ws_connected || ws_client == NULL || audio_tx_queue == NULL) {
         return ESP_ERR_INVALID_STATE;
     }
     
-    // 服务器期望接收 float32 格式的音频数据（范围 -1.0 到 1.0）
-    //多数音频处理库默认使用float32，且约定音频样本的值在-1.0到1.0之间
-    // 需要将 int16_t 转换为 float32 并归一化
-    size_t sample_count = length / sizeof(int16_t);
-    float *float_buffer = heap_caps_malloc(sample_count * sizeof(float), MALLOC_CAP_SPIRAM);
-    
-    if (float_buffer == NULL) {
-        ESP_LOGE(TAG, "Failed to allocate float buffer for audio conversion");
+    // 分配内存存储音频数据（异步发送，避免阻塞 fetch 任务）
+    audio_tx_item_t *item = heap_caps_malloc(sizeof(audio_tx_item_t), MALLOC_CAP_SPIRAM);
+    if (item == NULL) {
+        ESP_LOGE(TAG, "Failed to allocate memory for audio TX item");
         return ESP_ERR_NO_MEM;
     }
     
-    // 转换 int16_t 到 float32，并归一化到 [-1.0, 1.0]
-    // 公式：float_value = int16_value / 32768.0f
-    for (size_t i = 0; i < sample_count; i++) {
-        float_buffer[i] = (float)audio_data[i] / 32768.0f;
+    item->data = heap_caps_malloc(length, MALLOC_CAP_SPIRAM);
+    if (item->data == NULL) {
+        ESP_LOGE(TAG, "Failed to allocate memory for audio TX data");
+        free(item);
+        return ESP_ERR_NO_MEM;
     }
     
-    // 发送二进制数据（opcode 0x02）- float32 格式
-    size_t float_length = sample_count * sizeof(float);
-    int sent = esp_websocket_client_send_bin(ws_client, (const char*)float_buffer, 
-                                             float_length, portMAX_DELAY);
+    // 复制音频数据
+    memcpy(item->data, audio_data, length);
+    item->length = length;
     
-    free(float_buffer);
-    
-    if (sent < 0) {
-        ESP_LOGE(TAG, "Failed to send audio data via WebSocket");
-        return ESP_FAIL;
+    // 将音频数据放入队列（非阻塞，如果队列满就丢弃）
+    if (xQueueSend(audio_tx_queue, &item, 0) != pdTRUE) {
+        // 队列已满，释放内存（避免阻塞 fetch 任务）
+        free(item->data);
+        free(item);
+        return ESP_ERR_INVALID_SIZE;
     }
     
-    // ESP_LOGD(TAG, "Sent %d bytes of float32 audio data (%d samples)", sent, sample_count);
     return ESP_OK;
 }
 
