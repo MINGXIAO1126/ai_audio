@@ -1,0 +1,8 @@
+CMake Error at /home/ubuntu/esp/esp-idf/tools/cmake/component.cmake:317 (message):
+  Include directory '/home/ubuntu/esp/proj/ai_board/main/Audio_Driver' is not
+  a directory.
+Call Stack (most recent call first):
+  /home/ubuntu/esp/esp-idf/tools/cmake/component.cmake:492 (__component_add_include_dirs)
+  main/CMakeLists.txt:19 (idf_component_register)
+
+

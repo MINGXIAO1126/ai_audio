@@ -1,0 +1,177 @@
+[0;32mI (146) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (146) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (146) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (146) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (147) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (147) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (147) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (148) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (148) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (149) MSPI Timing: PSRAM timing tuning index: 4[0m
+[0;32mI (149) esp_psram: Found 8MB PSRAM device[0m
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x42008617
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x170c
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xe24
+load:0x403cb700,len:0x3198
+entry 0x403c893c
+[0;32mI (29) boot: ESP-IDF v5.4.1-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Nov  7 2025 11:06:02[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v0.2[0m
+[0;32mI (29) boot: efuse block revision: v1.3[0m
+[0;32mI (30) qio_mode: Enabling QIO for flash chip WinBond[0m
+[0;32mI (30) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (30) boot.esp32s3: SPI Mode       : QIO[0m
+[0;32mI (30) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (30) boot: Enabling RNG early entropy source...[0m
+[0;32mI (31) boot: Partition Table:[0m
+[0;32mI (31) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (31) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (31) boot:  1 factory          factory app      00 00 00010000 00300000[0m
+[0;32mI (32) boot:  2 flash_test       Unknown data     01 81 00310000 00084000[0m
+[0;32mI (32) boot:  3 model            Unknown data     01 82 00394000 005c3000[0m
+[0;32mI (33) boot: End of partition table[0m
+[0;32mI (33) esp_image: segment 0: paddr=00010020 vaddr=3c080020 size=1711ch ( 94492) map[0m
+[0;32mI (51) esp_image: segment 1: paddr=00027144 vaddr=3fc94c00 size=05344h ( 21316) load[0m
+[0;32mI (55) esp_image: segment 2: paddr=0002c490 vaddr=40374000 size=03b88h ( 15240) load[0m
+[0;32mI (58) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=796fch (497404) map[0m
+[0;32mI (132) esp_image: segment 4: paddr=000a9724 vaddr=40377b88 size=0d048h ( 53320) load[0m
+[0;32mI (143) esp_image: segment 5: paddr=000b6774 vaddr=600fe100 size=0001ch (    28) load[0m
+[0;32mI (150) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (150) boot: Disabling RNG early entropy source...[0m
+[0;32mI (151) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (151) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (152) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (152) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (152) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (152) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (152) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (153) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (153) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (153) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (154) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (155) MSPI Timing: PSRAM timing tuning index: 5[0m
+[0;32mI (155) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (155) esp_psram: Speed: 80MHz[0m
+[0;32mI (163) mmu_psram: Read only data copied and mapped to SPIRAM[0m
+[0;32mI (198) mmu_psram: Instructions copied and mapped to SPIRAM[0m
+[0;32mI (198) cpu_start: Multicore app[0m
+[0;32mI (476) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (485) cpu_start: Pro cpu start user code[0m
+[0;32mI (485) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (485) app_init: Application information:[0m
+[0;32mI (485) app_init: Project name:     factory_01[0m
+[0;32mI (485) app_init: App version:      1[0m
+[0;32mI (485) app_init: Compile time:     Nov  7 2025 11:05:54[0m
+[0;32mI (486) app_init: ELF file SHA256:  194085c70...[0m
+[0;32mI (486) app_init: ESP-IDF:          v5.4.1-dirty[0m
+[0;32mI (486) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (486) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (486) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (486) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (487) heap_init: At 3FC9A980 len 0004ED90 (315 KiB): RAM[0m
+[0;32mI (487) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (487) heap_init: At 600FE11C len 00001ECC (7 KiB): RTCRAM[0m
+[0;32mI (487) esp_psram: Adding pool of 7552K of PSRAM memory to heap allocator[0m
+[0;32mI (488) spi_flash: detected chip: winbond[0m
+[0;32mI (488) spi_flash: flash io: qio[0m
+[0;32mI (488) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (489) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (489) main_task: Started on CPU0[0m
+[0;32mI (499) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (499) main_task: Calling app_main()[0m
+[0;32mI (499) MIC_LOOPBACK: 
+[0m
+[0;32mI (499) MIC_LOOPBACK: ========================================[0m
+[0;32mI (499) MIC_LOOPBACK:   麦克风实时回声测试程序 (AFE版本)[0m
+[0;32mI (499) MIC_LOOPBACK:   Microphone Loopback with AFE[0m
+[0;32mI (499) MIC_LOOPBACK: ========================================
+[0m
+[0;32mI (499) MIC_LOOPBACK: 1. Initializing board hardware...[0m
+[0;33mW (499) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+[0;32mI (499) board: I2C bus initialized successfully[0m
+[0;32mI (509) ES7210: Work in Slave mode[0m
+[0;32mI (509) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (519) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (519) ES7210: Enable ES7210_INPUT_MIC3[0m
+[0;32mI (519) ES7210: Enable ES7210_INPUT_MIC4[0m
+[0;32mI (519) ES7210: Enable TDM mode[0m
+[0;32mI (529) I2S_IF: channel mode 0 bits:32/32 channel:2 mask:3[0m
+[0;32mI (529) I2S_IF: STD Mode 0 bits:32/32 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (529) ES7210: Bits 16[0m
+[0;32mI (539) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (539) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (539) ES7210: Enable ES7210_INPUT_MIC3[0m
+[0;32mI (549) ES7210: Enable ES7210_INPUT_MIC4[0m
+[0;32mI (549) ES7210: Enable TDM mode[0m
+[0;32mI (549) ES7210: Unmuted[0m
+[0;32mI (549) Adev_Codec: Open codec device OK[0m
+[0;32mI (559) ES8311: Work in Slave mode[0m
+[0;31mE (569) I2S_IF: Mode 1 conflict sample_rate 16000 with 0[0m
+[0;32mI (579) Adev_Codec: Open codec device OK[0m
+[0;32mI (579) MIC_LOOPBACK:    Board initialized (16kHz, 2ch, 16bit)
+[0m
+[0;32mI (579) MIC_LOOPBACK: 2. Initializing TCA9555 I/O expander...[0m
+[0;32mI (579) MIC_LOOPBACK:   I/O expander initialized
+[0m
+[0;32mI (579) MIC_LOOPBACK: 3. Enabling power amplifier...[0m
+[0;32mI (679) MIC_LOOPBACK:   Power amplifier enabled
+[0m
+[0;32mI (679) MIC_LOOPBACK: 4. Setting speaker volume to 70%...[0m
+[0;32mI (679) MIC_LOOPBACK:   Speaker volume set
+[0m
+[0;32mI (679) MIC_LOOPBACK: 5. Starting AFE audio loopback...[0m
+[0;32mI (679) App/Speech: 
+========== Audio Loopback with AFE Init ==========[0m
+[0;33mW (679) AFE_CONFIG: wakenet model not found. please load wakenet model...[0m
+[0;32mI (679) App/Speech: AFE Linear Gain: 2.0 (提高麦克风灵敏度)[0m
+[0;32mI (679) App/Speech: AGC: Compression=12 dB, Target=-3 dBFS[0m
+[0;32mI (679) App/Speech: AEC Filter Length: 4[0m
+[0;32mI (679) App/Speech: AFE Config:[0m
+[0;32mI (679) App/Speech:    AEC (Acoustic Echo Cancellation)[0m
+[0;32mI (679) App/Speech:    SE (Speech Enhancement)[0m
+[0;32mI (679) App/Speech:    NS (Noise Suppression)[0m
+[0;32mI (679) App/Speech:    VAD (Voice Activity Detection) - Mode: 3[0m
+[0;32mI (679) App/Speech:    AGC (Automatic Gain Control)[0m
+[0;32mI (679) App/Speech:    WakeNet (Disabled)[0m
+[0;32mI (679) App/Speech:    MultiNet (Disabled)[0m
+[0;32mI (679) App/Speech: [0m
+[0;32mI (679) App/Speech: Audio Processing:[0m
+[0;32mI (679) App/Speech:    Output Amplification: 2x[0m
+[0;32mI (679) App/Speech:    VAD Filter: 启用 (过滤非人声噪音)[0m
+[0;32mI (679) App/Speech:    Soft Limiter: 启用 (防止刺耳失真)[0m
+[0;32mI (679) App/Speech:    Limiter Threshold: 28000[0m
+[0;32mI (799) AFE: AFE Version: (2MIC_V250113)[0m
+[0;32mI (799) AFE: Input PCM Config: total 4 channels(2 microphone, 1 playback), sample rate:16000[0m
+[0;32mI (799) AFE: AFE Pipeline: [input] -> |AEC(SR_LOW_COST)| -> |SE(BSS)| -> |VAD(WebRTC)| -> [output][0m
+[0;32mI (799) App/Speech: Starting AFE loopback tasks...[0m
+[0;32mI (799) App/Speech: === Loopback Detect Task Started ===[0m
+[0;32mI (799) App/Speech: AFE chunk size: 512 samples[0m
+[0;32mI (799) App/Speech: VAD Filter: ENABLED (只播放人声)[0m
+[0;32mI (799) App/Speech: Soft Limiter: ENABLED (防止刺耳)[0m
+[0;32mI (899) App/Speech: === Loopback Feed Task Started ===[0m
+[0;32mI (899) App/Speech: Chunk size: 1024 samples, Channels: 4[0m
+[0;32mI (909) App/Speech: ========== AFE Loopback Init Complete ==========
+[0m
+[0;32mI (909) MIC_LOOPBACK:   AFE loopback started
+[0m
+[0;32mI (909) MIC_LOOPBACK: ========================================[0m
+[0;32mI (909) MIC_LOOPBACK:   系统初始化完成！[0m
+[0;32mI (909) MIC_LOOPBACK:   (经过AEC/SE/NS/AGC算法处理)[0m
+[0;32mI (909) MIC_LOOPBACK: ========================================
+[0m
+[0;32mI (7219) App/Speech: [FEED] Count:100, Samples: -127, 111, -1, 136[0m
+[0;32mI (7249) App/Speech: [PLAY] Count:200, VAD:语音89/静音111, Vol:0.0 dB, Max:440, OK:88, Fail:0[0m
+[0;32mI (10439) App/Speech: [PLAY] Count:300, VAD:语音182/静音118, Vol:0.0 dB, Max:126, OK:181, Fail:0[0m
+[0;32mI (13619) App/Speech: [FEED] Count:200, Samples: -22, 1, -2, -5[0m
+[0;32mI (20009) App/Speech: [FEED] Count:300, Samples: -51, -31, 0, -16[0m
+[0;32mI (20039) App/Speech: [PLAY] Count:600, VAD:语音356/静音244, Vol:0.0 dB, Max:160, OK:355, Fail:0[0m
+[0;32mI (23249) App/Speech: [PLAY] Count:700, VAD:语音393/静音307, Vol:0.0 dB, Max:2162, OK:392, Fail:0[0m
+[0;32mI (26419) App/Speech: [FEED] Count:400, Samples: -34, 34, -2, 26[0m
+[0;32mI (32819) App/Speech: [FEED] Count:500, Samples: -12, 25, 1, 24[0m

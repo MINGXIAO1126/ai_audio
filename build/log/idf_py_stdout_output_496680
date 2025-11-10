@@ -1,0 +1,242 @@
+[0;32mI (247) boot: Disabling RNG early entropy source...[0m
+[0;32mI (248) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (248) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (248) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (249) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (249) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (249) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (249) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (250) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (250) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (250) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (251) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (251) MSPI Timing: PSRAM timing tuning index: 5[0m
+IO, clock div:1
+load:0x3fce2820,len:0x170c
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xe24
+load:0x403cb700,len:0x3198
+entry 0x403c893c
+[0;32mI (32) boot: ESP-IDF v5.4.1-dirty 2nd stage bootloader[0m
+[0;32mI (32) boot: compile time Nov  7 2025 11:06:02[0m
+[0;32mI (32) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v0.2[0m
+[0;32mI (32) boot: efuse block revision: v1.3[0m
+[0;32mI (32) qio_mode: Enabling QIO for flash chip WinBond[0m
+[0;32mI (33) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (33) boot.esp32s3: SPI Mode       : QIO[0m
+[0;32mI (33) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (33) boot: Enabling RNG early entropy source...[0m
+[0;32mI (33) boot: Partition Table:[0m
+[0;32mI (33) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (34) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (34) boot:  1 factory          factory app      00 00 00010000 00300000[0m
+[0;32mI (34) boot:  2 flash_test       Unknown data     01 81 00310000 00084000[0m
+[0;32mI (35) boot:  3 model            Unknown data     01 82 00394000 005c3000[0m
+[0;32mI (35) boot: End of partition table[0m
+[0;32mI (35) esp_image: segment 0: paddr=00010020 vaddr=3c100020 size=2bc3ch (179260) map[0m
+[0;32mI (63) esp_image: segment 1: paddr=0003bc64 vaddr=3fc9c900 size=043b4h ( 17332) load[0m
+[0;32mI (66) esp_image: segment 2: paddr=00040020 vaddr=42000020 size=f90f4h (1020148) map[0m
+[0;32mI (218) esp_image: segment 3: paddr=0013911c vaddr=3fca0cb4 size=0322ch ( 12844) load[0m
+[0;32mI (220) esp_image: segment 4: paddr=0013c350 vaddr=40374000 size=1884ch (100428) load[0m
+[0;32mI (240) esp_image: segment 5: paddr=00154ba4 vaddr=600fe100 size=0001ch (    28) load[0m
+[0;32mI (250) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (250) boot: Disabling RNG early entropy source...[0m
+[0;32mI (251) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (251) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (252) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (252) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (252) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (252) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (252) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (253) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (253) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (253) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (254) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (255) MSPI Timing: PSRAM timing tuning index: 5[0m
+[0;32mI (255) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (255) esp_psram: Speed: 80MHz[0m
+[0;32mI (267) mmu_psram: Read only data copied and mapped to SPIRAM[0m
+[0;32mI (337) mmu_psram: Instructions copied and mapped to SPIRAM[0m
+[0;32mI (337) cpu_start: Multicore app[0m
+[0;32mI (594) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (602) cpu_start: Pro cpu start user code[0m
+[0;32mI (602) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (602) app_init: Application information:[0m
+[0;32mI (603) app_init: Project name:     factory_01[0m
+[0;32mI (603) app_init: App version:      1[0m
+[0;32mI (603) app_init: Compile time:     Nov  7 2025 14:59:32[0m
+[0;32mI (603) app_init: ELF file SHA256:  fd707953b...[0m
+[0;32mI (603) app_init: ESP-IDF:          v5.4.1-dirty[0m
+[0;32mI (603) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (604) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (604) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (604) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (604) heap_init: At 3FCA82C0 len 00041450 (261 KiB): RAM[0m
+[0;32mI (604) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (605) heap_init: At 600FE11C len 00001ECC (7 KiB): RTCRAM[0m
+[0;32mI (605) esp_psram: Adding pool of 6976K of PSRAM memory to heap allocator[0m
+[0;32mI (605) spi_flash: detected chip: winbond[0m
+[0;32mI (605) spi_flash: flash io: qio[0m
+[0;32mI (606) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (606) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (607) main_task: Started on CPU0[0m
+[0;32mI (617) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (617) main_task: Calling app_main()[0m
+[0;32mI (617) MIC_LOOPBACK: 
+[0m
+[0;32mI (617) MIC_LOOPBACK: ========================================[0m
+[0;32mI (617) MIC_LOOPBACK:   麦克风实时回声测试程序 (AFE版本)[0m
+[0;32mI (617) MIC_LOOPBACK:   Microphone Loopback with AFE[0m
+[0;32mI (617) MIC_LOOPBACK: ========================================
+[0m
+[0;32mI (617) MIC_LOOPBACK: 1. Initializing board hardware...[0m
+[0;33mW (617) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+[0;32mI (617) board: I2C bus initialized successfully[0m
+[0;32mI (627) ES7210: Work in Slave mode[0m
+[0;32mI (627) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (637) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (637) ES7210: Enable ES7210_INPUT_MIC3[0m
+[0;32mI (637) ES7210: Enable ES7210_INPUT_MIC4[0m
+[0;32mI (637) ES7210: Enable TDM mode[0m
+[0;32mI (647) I2S_IF: channel mode 0 bits:32/32 channel:2 mask:3[0m
+[0;32mI (647) I2S_IF: STD Mode 0 bits:32/32 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (647) ES7210: Bits 16[0m
+[0;32mI (657) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (657) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (657) ES7210: Enable ES7210_INPUT_MIC3[0m
+[0;32mI (667) ES7210: Enable ES7210_INPUT_MIC4[0m
+[0;32mI (667) ES7210: Enable TDM mode[0m
+[0;32mI (667) ES7210: Unmuted[0m
+[0;32mI (667) Adev_Codec: Open codec device OK[0m
+[0;32mI (677) ES8311: Work in Slave mode[0m
+[0;31mE (687) I2S_IF: Mode 1 conflict sample_rate 16000 with 0[0m
+[0;32mI (697) Adev_Codec: Open codec device OK[0m
+[0;32mI (697) MIC_LOOPBACK:    Board initialized (16kHz, 2ch, 16bit)
+[0m
+[0;32mI (697) MIC_LOOPBACK: 2. Initializing TCA9555 I/O expander...[0m
+[0;32mI (697) MIC_LOOPBACK:   I/O expander initialized
+[0m
+[0;32mI (697) MIC_LOOPBACK: 3. Enabling power amplifier...[0m
+[0;32mI (797) MIC_LOOPBACK:   Power amplifier enabled
+[0m
+[0;32mI (797) MIC_LOOPBACK: 4. Setting speaker volume to 70%...[0m
+[0;32mI (797) MIC_LOOPBACK:   Speaker volume set
+[0m
+[0;32mI (797) MIC_LOOPBACK: 5. Initializing WiFi and WebSocket...[0m
+[0;32mI (797) WebSocket: 
+========================================[0m
+[0;32mI (797) WebSocket:   WebSocket Audio Streaming Init[0m
+[0;32mI (797) WebSocket: ========================================[0m
+[0;32mI (797) WebSocket: 1. Initializing WiFi...[0m
+[0;32mI (797) pp: pp rom version: e7ae62f[0m
+[0;32mI (797) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (807) wifi:wifi driver task: 3fcc0320, prio:23, stack:6656, core=0[0m
+[0;32mI (807) wifi:wifi firmware version: 79fa3f41ba[0m
+[0;32mI (807) wifi:wifi certification version: v7.0[0m
+[0;32mI (807) wifi:config NVS flash: enabled[0m
+[0;32mI (807) wifi:config nano formatting: disabled[0m
+[0;32mI (807) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (807) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (807) wifi:Init management short buffer num: 32[0m
+[0;32mI (807) wifi:Init static tx buffer num: 16[0m
+[0;32mI (807) wifi:Init tx cache buffer num: 32[0m
+[0;32mI (807) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (807) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (807) wifi:Init static rx buffer num: 10[0m
+[0;32mI (807) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (807) wifi_init: rx ba win: 6[0m
+[0;32mI (807) wifi_init: accept mbox: 6[0m
+[0;32mI (807) wifi_init: tcpip mbox: 32[0m
+[0;32mI (807) wifi_init: udp mbox: 6[0m
+[0;32mI (807) wifi_init: tcp mbox: 6[0m
+[0;32mI (817) wifi_init: tcp tx win: 5760[0m
+[0;32mI (817) wifi_init: tcp rx win: 5760[0m
+[0;32mI (817) wifi_init: tcp mss: 1440[0m
+[0;32mI (817) wifi_init: WiFi/LWIP prefer SPIRAM[0m
+[0;32mI (817) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (817) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (817) phy_init: phy_version 700,8582a7fd,Feb 10 2025,20:13:11[0m
+[0;32mI (857) wifi:mode : sta (80:b5:4e:da:76:e0)[0m
+[0;32mI (857) wifi:enable tsf[0m
+[0;32mI (857) WebSocket: WiFi initialization finished.[0m
+[0;32mI (857) WebSocket: WiFi STA started, connecting...[0m
+[0;32mI (857) WebSocket: Connecting to SSID: Chenhh[0m
+[0;32mI (867) wifi:new:<1,1>, old:<1,0>, ap:<255,255>, sta:<1,1>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (867) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (897) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (927) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (947) wifi:connected with Chenhh, aid = 7, channel 1, 40U, bssid = 04:f1:69:d6:88:7c[0m
+[0;32mI (947) wifi:security: WPA2-PSK, phy: bgn, rssi: -53[0m
+[0;32mI (947) wifi:pm start, type: 1[0m
+
+[0;32mI (947) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (947) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (1017) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2027) esp_netif_handlers: sta ip: 192.168.2.7, mask: 255.255.255.0, gw: 192.168.2.1[0m
+[0;32mI (2027) WebSocket: Got IP Address: 192.168.2.7[0m
+[0;32mI (2027) WebSocket: ✓ Connected to WiFi SSID: Chenhh[0m
+[0;32mI (2027) WebSocket: 
+2. Initializing WebSocket...[0m
+[0;32mI (2027) WebSocket: Initializing WebSocket client...[0m
+[0;32mI (2027) WebSocket: WebSocket URI: ws://192.168.2.247:6006/ws[0m
+[0;32mI (2027) websocket_client: Started[0m
+[0;32mI (2027) WebSocket: WebSocket client started successfully[0m
+[0;32mI (2057) wifi:<ba-add>idx:0 (ifx:0, 04:f1:69:d6:88:7c), tid:0, ssn:8, winSize:64[0m
+[0;32mI (2077) WebSocket: WebSocket connected to server[0m
+[0;32mI (2127) WebSocket: ✓ WebSocket connected successfully[0m
+[0;32mI (2127) WebSocket: 
+========================================[0m
+[0;32mI (2127) WebSocket:   WebSocket initialization complete![0m
+[0;32mI (2127) WebSocket: ========================================
+[0m
+[0;32mI (2127) MIC_LOOPBACK:    ✓ WebSocket initialized
+[0m
+[0;32mI (2127) MIC_LOOPBACK: 5. Starting AFE audio loopback...[0m
+[0;32mI (2127) App/Speech: 
+========== Audio Loopback with AFE Init ==========[0m
+[0;33mW (2127) AFE_CONFIG: wakenet model not found. please load wakenet model...[0m
+[0;32mI (2127) App/Speech: AFE Linear Gain: 10.0 (提高麦克风灵敏度)[0m
+[0;32mI (2127) App/Speech: AGC: Compression=12 dB, Target=-3 dBFS[0m
+[0;32mI (2127) App/Speech: AEC Filter Length: 4[0m
+[0;32mI (2127) App/Speech: AFE Config:[0m
+[0;32mI (2127) App/Speech:    AEC (Acoustic Echo Cancellation)[0m
+[0;32mI (2127) App/Speech:    SE (Speech Enhancement)[0m
+[0;32mI (2127) App/Speech:    NS (Noise Suppression)[0m
+[0;32mI (2127) App/Speech:    VAD (Voice Activity Detection) - Mode: 3[0m
+[0;32mI (2127) App/Speech:    AGC (Automatic Gain Control)[0m
+[0;32mI (2127) App/Speech:    WakeNet (Disabled)[0m
+[0;32mI (2127) App/Speech:    MultiNet (Disabled)[0m
+[0;32mI (2127) App/Speech: [0m
+[0;32mI (2127) App/Speech: Audio Processing:[0m
+[0;32mI (2127) App/Speech:    Output Amplification: 3x[0m
+[0;32mI (2127) App/Speech:    VAD Filter: 启用 (过滤非人声噪音)[0m
+[0;32mI (2127) App/Speech:    Soft Limiter: 启用 (防止刺耳失真)[0m
+[0;32mI (2127) App/Speech:    Limiter Threshold: 28000[0m
+[0;32mI (2127) App/Speech:    WebSocket Stream: 启用 (需配置WiFi)[0m
+[0;32mI (2247) AFE: AFE Version: (2MIC_V250113)[0m
+[0;32mI (2247) AFE: Input PCM Config: total 4 channels(2 microphone, 1 playback), sample rate:16000[0m
+[0;32mI (2247) AFE: AFE Pipeline: [input] -> |AEC(SR_LOW_COST)| -> |SE(BSS)| -> |VAD(WebRTC)| -> [output][0m
+[0;32mI (2247) App/Speech: Starting AFE loopback tasks...[0m
+[0;32mI (2247) App/Speech: === Loopback Detect Task Started ===[0m
+[0;32mI (2247) App/Speech: AFE chunk size: 512 samples[0m
+[0;32mI (2247) App/Speech: VAD Filter: ENABLED (只播放人声)[0m
+[0;32mI (2247) App/Speech: Soft Limiter: ENABLED (防止刺耳)[0m
+[0;32mI (2347) App/Speech: === Loopback Feed Task Started ===[0m
+[0;32mI (2347) App/Speech: Chunk size: 1024 samples, Channels: 4[0m
+[0;32mI (2357) App/Speech: ========== AFE Loopback Init Complete ==========
+[0m
+[0;32mI (2357) MIC_LOOPBACK:    ✓ AFE loopback started
+[0m
+[0;32mI (2357) MIC_LOOPBACK: ========================================[0m
+[0;32mI (2357) MIC_LOOPBACK:   系统初始化完成！[0m
+[0;32mI (2357) MIC_LOOPBACK:   对着麦克风说话，应该能听到高质量回声[0m
+[0;32mI (2357) MIC_LOOPBACK:   (经过AEC/SE/NS/VAD/AGC算法处理)[0m
+[0;32mI (2357) MIC_LOOPBACK: ========================================
+[0m
+[0;32mI (5507) App/Speech: [PLAY] Count:100, VAD:语音22/静音78, Vol:0.0 dB, Max:1790, OK:21, Fail:0[0m
+[0;32mI (8667) App/Speech: [FEED] Count:100, Samples: -394, 293, -1, 282[0m
+[0;32mI (11897) App/Speech: [PLAY] Count:300, VAD:语音206/静音94, Vol:0.0 dB, Max:2810, OK:205, Fail:0[0m
+[0;32mI (12227) WebSocket: WebSocket received data, opcode=10, len=0[0m
+[0;32mI (15077) App/Speech: [FEED] Count:200, Samples: 612, -169, 1, -191[0m
+[0;32mI (15107) App/Speech: [PLAY] Count:400, VAD:语音301/静音99, Vol:0.0 dB, Max:6900, OK:300, Fail:0[0m

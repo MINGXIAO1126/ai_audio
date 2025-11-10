@@ -1,0 +1,2 @@
+source /home/ubuntu/esp/proj/ai_board/build/gdbinit/symbols
+source /home/ubuntu/esp/proj/ai_board/build/gdbinit/connect

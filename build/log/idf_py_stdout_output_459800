@@ -1,0 +1,31 @@
+[0/1] Re-running CMake...
+-- git rev-parse returned 'fatal: not a git repository (or any of the parent directories): .git'
+-- Could not use 'git describe' to determine PROJECT_VER.
+-- Building ESP-IDF components for target esp32s3
+NOTICE: 
+Following dependencies have new versions available:
+Dependency "espressif/esp-sr": "2.1.5" -> "2.2.0"
+Dependency "espressif/esp_audio_simple_player": "0.9.4~2" -> "0.9.5"
+Dependency "espressif/esp_codec_dev": "1.5.1" -> "1.5.2"
+Dependency "espressif/gmf_audio": "0.7.1" -> "0.7.2"
+Dependency "espressif/gmf_core": "0.7.4" -> "0.7.5"
+Dependency "espressif/gmf_io": "0.7.4" -> "0.7.6"
+Consider running "idf.py update-dependencies" to update your lock file.
+NOTICE: Processing 14 dependencies:
+NOTICE: [1/14] espressif/dl_fft (0.3.1)
+NOTICE: [2/14] espressif/esp-dsp (1.6.0)
+NOTICE: [3/14] espressif/esp-sr (2.1.5)
+NOTICE: [4/14] espressif/esp_audio_codec (2.3.0)
+NOTICE: [5/14] espressif/esp_audio_effects (1.1.0)
+NOTICE: [6/14] espressif/esp_audio_simple_player (0.9.4~2)
+NOTICE: [7/14] espressif/esp_codec_dev (1.5.1)
+NOTICE: [8/14] espressif/esp_io_expander (1.0.1)
+NOTICE: [9/14] espressif/esp_io_expander_tca95xx_16bit (2.0.1)
+NOTICE: [10/14] espressif/gmf_audio (0.7.1)
+NOTICE: [11/14] espressif/gmf_core (0.7.4)
+NOTICE: [12/14] espressif/gmf_io (0.7.4)
+NOTICE: [13/14] espressif/led_strip (3.0.1~1)
+NOTICE: [14/14] idf (5.4.1)
+-- Configuring incomplete, errors occurred!
+FAILED: build.ninja 
+/usr/bin/cmake --regenerate-during-build -S/home/ubuntu/esp/proj/ai_board -B/home/ubuntu/esp/proj/ai_board/build
